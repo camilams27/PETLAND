@@ -1,4 +1,4 @@
-# petland-app
+# petland-app 🐾
 
 Petland é um projeto que tem como objetivo criar uma agenda para o animal de estimação do cliente cadastrado na plataforma online. A aplicação foi criada para facilitar 
 a organização de informações referente aos pets, registrando por exemplos as vacinas tomadas, idas ao veterinário e entre outros. Além disso, utilizando a localização 
