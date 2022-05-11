@@ -1,0 +1,49 @@
+.expanded-toolbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 181, 34);
+}
+
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+
+button{
+    text-transform: uppercase;
+    border-bottom: solid 1px white;
+    border-right: solid 1px white;
+}
+
+#logo{
+    height: 3rem;
+}
+
+.logo{
+    height: 3rem;
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+.loginBtn{
+    background-color: #A8DADC;
+    color: #1D3557;
+    transition: .2s;
+}
+.loginBtn:hover{
+    background-color: #60bac0;
+    color: #F1FAEE;
+}
+
+.singupBtn{
+    background-color: #1D3557;
+    color: #A8DADC;
+    transition: .2s;
+}
+.singupBtn:hover{
+    background-color: #457B9D;
+    color: #F1FAEE;
+}

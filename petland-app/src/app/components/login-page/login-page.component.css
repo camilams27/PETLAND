@@ -1,0 +1,43 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+}
+
+h1{
+    font-variant: small-caps;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    gap: 2vw;
+}
+
+.w-50{
+    width: 50vw;
+}
+
+.w-24{
+    width: 24vw;
+}
+
+button{
+    color: white;
+}
+
+.cancel{
+    background-color: rgb(192, 59, 59);
+}
+
+.create{
+    background-color: rgb(43, 156, 43);
+}

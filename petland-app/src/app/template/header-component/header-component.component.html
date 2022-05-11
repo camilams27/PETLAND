@@ -1,0 +1,25 @@
+<!-- <mat-toolbar class="header mat-elevation-z4"> 
+    <span>
+        <a href="">
+            <img src="assets/images/pet-house.png" alt="pet house" class="logo">
+        </a>
+    </span>
+    <span class="buttons">
+        <button mat-stroked-button class="loginBtn">
+            LOGIN 
+        </button>
+        <button mat-stroked-button class="singupBtn"> 
+            SING UP
+        </button>
+    </span>
+</mat-toolbar> -->
+
+<mat-toolbar color="primary" class="expanded-toolbar">
+    <img src="../../../assets/images/pet-house.png" alt="" id="logo">
+  
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm class="btns">
+        <button mat-button routerLink="/login"> Sing In </button>
+        <button mat-button> Sing Up </button>
+    </div>
+</mat-toolbar>
+<router-outlet></router-outlet>
