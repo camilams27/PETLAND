@@ -1,0 +1,3 @@
+link do colab, em que foi reproduzindo tutorial para conhecimento e adaptação da ferramenta - Tensorflow.
+
+https://colab.research.google.com/drive/1AyuuWI40bVeLE-rDXDBWmW4sDM3IjmCp?usp=sharing:
