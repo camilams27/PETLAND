@@ -16,12 +16,25 @@ main{
 
 .home{
     border-radius: 0%;
+    padding: 0;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
 }
 
-.subtitle{
-    text-align: center;
-    margin: 0;
-    font-size: 1.5rem;
+.info, .infoBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+button{
+    color: white;
+    background-color: #69C5EE;
+    width: 10rem;
 }
 
 .content{
@@ -30,18 +43,54 @@ main{
     align-items: center;
     padding: .5rem;
     gap: .5rem;
+    background-color: #ebebeb;
 }
 
+.contentProject{
+    padding: 0 2rem;
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
 
 .logo > img{
     width: 50vw;   
 }
 
-/* -----------------FEATURES-----------------  */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* -----------------SOBRE / FEATURES-----------------  */
+
+#about{
+    display: flex;
+}
+
+#about > nav{
+    color: #258BB7;
+    background-color: #69c6ee0a;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    width: 100%;
+    background-color: #69c6ee59;
+    text-align: center;
+}
+
+#infoProject{
+    text-align: center;
+}
 
 #features{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
 }
 
 .imgCard{

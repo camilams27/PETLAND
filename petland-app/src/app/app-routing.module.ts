@@ -11,23 +11,9 @@ const routes: Routes = [
   {
     path:'',
     component: AppComponent
-  },
-  {
-    path:'login',
-    component: LoginPageComponent
-  },
-  {
-    path:'agenda',
-    component: AgendaComponent
-  },
-  {
-    path:'saude',
-    component: SaudeComponent
-  },
-  {
-    path:'locais',
-    component: LocaisComponent
   }
+  
+  
 ];
 
 @NgModule({
