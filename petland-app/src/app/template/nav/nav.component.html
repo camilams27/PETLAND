@@ -1,0 +1,45 @@
+<mat-sidenav-container class="nav-container">
+
+    <mat-sidenav-content class="content">
+      <button mat-icon-button (click)="sidenav.toggle()" class="mat-nav-button">
+          <i class="material-icons">menu</i>
+      </button>
+      <router-outlet></router-outlet>
+  
+    </mat-sidenav-content>
+  
+    <!-- -----------------------------SIDENAV----------------------------- -->
+  
+    <mat-sidenav class="sidenav" mode="side" closed fixedInViewport="true" fixedTopGap="100" #sidenav>
+        <mat-list class="mat-list">
+            <a mat-list-item routerLink="/home">
+                <i class="material-icons"> home</i> 
+                Home
+            </a>
+        </mat-list>
+        <mat-list class="mat-list">
+            <a mat-list-item routerLink="/agendas">
+                <i class="material-icons"> theaters</i> 
+                Agendas
+            </a>
+        </mat-list>
+        <mat-list class="mat-list">
+            <a mat-list-item routerLink="/urgencia">
+                <i class="material-icons"> local_hospital </i> 
+                Urgência
+            </a>
+        </mat-list>
+        <mat-list class="mat-list">
+            <a mat-list-item routerLink="/lugares">
+                <i class="material-icons"> place </i> 
+                Locais
+            </a>
+        </mat-list>
+        <mat-list class="mat-list">
+            <a mat-list-item routerLink="/fale-conosco">
+                <i class="material-icons"> chat </i> 
+                Fale Conosco
+            </a>
+        </mat-list>
+    </mat-sidenav>
+</mat-sidenav-container>
