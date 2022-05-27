@@ -17,7 +17,7 @@ main{
 .home{
     border-radius: 0%;
     padding: 0;
-    height: 90vh;
+    height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,10 +70,12 @@ a{
     display: flex;
     justify-content: space-between;
     height: 101vh;
+    background-color: #fff;
 }
 
 :host /deep/ .mat-tab-group {
     flex-direction: row;
+    overflow: hidden;
   }
   :host /deep/ .mat-tab-header {
     border-bottom: none;
@@ -96,10 +98,12 @@ a{
   }
   :host /deep/ .mat-tab-body-wrapper {
     flex: 1 1 auto;
+    overflow: hidden;
   }
   :host /deep/ .mat-tab-body-content {
     align-items: center;
     display: flex;
+    overflow: hidden;
     padding-left: 28vh;
   }
 
@@ -110,6 +114,15 @@ a{
 
 #features{
     display: flex;
+}
+#features img{
+    padding: 325px 0px 0 388px;
+    overflow: hidden;
+    float: left;
+    shape-outside: url(https://i.ibb.co/71drGzT/cachorro-e-gato.png);
+    background-size: 80px 80px;
+    padding-left: 15px;
+    padding-right: -15px
 }
 
 .cardTitle{
