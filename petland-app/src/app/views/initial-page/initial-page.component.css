@@ -69,28 +69,40 @@ a{
 #about{
     display: flex;
     justify-content: space-between;
+    height: 101vh;
 }
 
-#about > nav{
-    color: #258BB7;
-    background-color: #69c6ee0a;
-    width: 25%;
-    display: flex;
+:host /deep/ .mat-tab-group {
+    flex-direction: row;
+  }
+  :host /deep/ .mat-tab-header {
+    border-bottom: none;
+    background-color: #90c9f670;;
     align-items: center;
-    justify-content: center;
-}
+  }
+  :host /deep/ .mat-tab-header-pagination {
+    display: none !important;
+  }
+  :host /deep/ .mat-tab-label-active {
+    background-color: #70b5ea;
+  }
+  :host /deep/ .mat-tab-labels {
+    flex-direction: column;
+  }
+  :host /deep/ .mat-ink-bar {
+    height: 100%;
+    display: none;
+    left: 98% !important;
+  }
+  :host /deep/ .mat-tab-body-wrapper {
+    flex: 1 1 auto;
+  }
+  :host /deep/ .mat-tab-body-content {
+    align-items: center;
+    display: flex;
+    padding-left: 28vh;
+  }
 
-h2{
-    width: 100%;
-    background-color: #69c6ee59;
-    text-align: center;
-}
-
-h2:hover{
-    transition: .5;
-    background-color: #3896becb;
-    color: white;
-}
 
 #infoProject{
     text-align: center;

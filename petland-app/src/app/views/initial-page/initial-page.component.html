@@ -20,34 +20,9 @@
     </mat-card>
     
     <section id="about">
-        <nav> <h2> Sobre </h2> </nav>
-        <div id="infoProject"> texto 
-            <div id="features">
-            <mat-card class="card">
-                <mat-card-content  routerLink="/agenda">
-                    <img src="assets/images/pet-album.png" alt="pet note" id="note" class="imgCard">
-                </mat-card-content>
-                <mat-card-title class="cardTitle">
-                    Acompanhe a trajetória de seu pet!
-                </mat-card-title>
-            </mat-card>
-            <mat-card class="card" routerLink="/saude">
-                <mat-card-content>
-                    <img src="assets/images/cat-picture.png" alt="pet picture" id="picture" class="imgCard">
-                </mat-card-content>
-                <mat-card-title class="cardTitle">
-                    Receba informações para a saúde de seu pet!
-                </mat-card-title>
-            </mat-card>
-            <mat-card class="card" routerLink="/locais">
-                <mat-card-content>
-                    <img src="assets/images/map.png" alt="mapa" id="map" class="imgCard">
-                </mat-card-content>
-                <mat-card-title class="cardTitle">
-                    Encontre lugares.
-                </mat-card-title>
-            </mat-card>
-            </div>
-        </div>
+        <mat-tab-group animationDuration="0ms" id="features" mat-align-tabs="center">
+            <mat-tab label="Sobre">Content 1</mat-tab>
+            <mat-tab label="Nossos serviços">Content 2</mat-tab>
+          </mat-tab-group>
     </section>
 </main>
