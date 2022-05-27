@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+
+#cancel{
+    background-color: brown;
+}
+
+#next{
+    background-color: rgb(6, 112, 6);
+}

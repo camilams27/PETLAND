@@ -1,4 +1,8 @@
+import { CadastroComponent } from './../../views/cadastro/cadastro.component';
+import { LoginComponent } from './../../views/login/login.component';
 import { Component, OnInit } from '@angular/core';
+
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public modal:MatDialog){ }
 
   ngOnInit(): void {
+  }
+
+  Entrar(){
+    const entrar = this.modal.open(LoginComponent);
+  }
+
+  Cadastrar(){
+    const cadastro = this.modal.open(CadastroComponent,{
+      width: "50%",
+      height: "60%"
+    });
   }
 
 }
