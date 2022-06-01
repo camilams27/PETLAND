@@ -1,17 +1,19 @@
-<h1 mat-dialog-title> Entrar </h1>
-<div mat-dialog-content>
-  <p>Login</p>
-  <mat-form-field appearance="fill">
-    <input matInput >
-  </mat-form-field>
-</div>
-<div mat-dialog-content>
-    <p>Senha</p>
+<div class="login-container">
+  <h1 mat-dialog-title> Entrar </h1>
+  <div mat-dialog-content>
     <mat-form-field appearance="fill">
+      <mat-label>Usuário</mat-label>
+      <input matInput >
+    </mat-form-field>
+  </div>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Senha</mat-label>
       <input matInput type="password">
     </mat-form-field>
   </div>
-<div class="buttons">
-  <button mat-button id="cancel"> Cancelar </button>
-  <button mat-button id="next" routerLink="/home"> Entrar </button>
+  <div class="buttons">
+    <button mat-button id="cancel"> Cancelar </button>
+    <button mat-button id="next" routerLink="/home"> Entrar </button>
+  </div>
 </div>

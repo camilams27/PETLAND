@@ -116,13 +116,9 @@ a{
     display: flex;
 }
 #features img{
-    padding: 325px 0px 0 388px;
-    overflow: hidden;
-    float: left;
-    shape-outside: url(https://i.ibb.co/71drGzT/cachorro-e-gato.png);
-    background-size: 80px 80px;
-    padding-left: 15px;
-    padding-right: -15px
+    margin-top: 38vh;
+    width: 592px;
+    height: 388px;
 }
 
 .cardTitle{

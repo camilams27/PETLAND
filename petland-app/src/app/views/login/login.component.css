@@ -1,9 +1,39 @@
+:host /deep/ .mat-form-field-flex{
+    border: 1px solid #726D6D;
+    border-radius: none;
+}
+:host /deep/ .mat-form-field-appearance-fill .mat-form-field-flex{
+    border-radius: 0;
+}
+:host /deep/ .mat-form-field-appearance-fill .mat-form-field-underline::before{
+    background-color: transparent;
+}
+:host /deep/ .mat-form-field.mat-focused .mat-form-field-label {
+    color: #726D6D;
+}
+:host /deep/ .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #726D6D;
+}
+:host /deep/ .mat-form-field-flex {
+    width: 417px;
+    background-color: transparent;
+}
+:host /deep/ .mat-button {
+    width: 419px;
+    margin-bottom: 3px;
+}
+
+.login-container{
+    width: 417px;
+    height: 439px;
+}
+
 h1{
     text-align: center;
 }
 
 .buttons{
-    display: flex;
+    display: block;
     justify-content: space-between;
     color: white;
 }
@@ -14,5 +44,5 @@ h1{
 }
 
 #next{
-    background-color: rgb(6, 112, 6);
+    background-color: #71C8EF;
 }
