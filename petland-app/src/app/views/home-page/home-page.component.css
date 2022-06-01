@@ -1,0 +1,76 @@
+
+#about{
+    display: flex;
+    justify-content: space-between;
+    height: 101vh;
+    background-color: #fff;
+}
+
+:host /deep/ .mat-tab-group {
+    flex-direction: row;
+    overflow: hidden;
+  }
+  :host /deep/ .mat-tab-header {
+    border-bottom: none;
+    background-color: #90c9f670;;
+    align-items: center;
+  }
+  :host /deep/ .mat-tab-header-pagination {
+    display: none !important;
+  }
+  :host /deep/ .mat-tab-label-active {
+    background-color: #70b5ea;
+  }
+  :host /deep/ .mat-tab-labels {
+    flex-direction: column;
+  }
+  :host /deep/ .mat-ink-bar {
+    height: 100%;
+    display: none;
+    left: 98% !important;
+  }
+  :host /deep/ .mat-tab-body-wrapper {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+  :host /deep/ .mat-tab-body-content {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    padding-left: 28vh;
+  }
+  :host /deep/ .mat-flat-button {
+    background-color: #47b8eabf;
+    color: #fff;
+    left: 86vh;
+    top: 86vh;
+    position: absolute;
+}
+
+  #pets img{
+    width: 160px;
+    margin-bottom: 50vh;
+    height: 160px;
+}
+
+.pet-name{
+    border-bottom: 3px solid #90c9f6;
+    margin-bottom: 68vh;
+    margin-left: 24vh;
+}
+
+.infos-pet{
+    margin-left: -18vh;
+    margin-bottom: 34vh;
+}
+.infos-pet h3{
+    font-weight: 500;
+}
+.precautions{
+    border-bottom: 3px solid #90c9f6;
+    position: absolute;
+}
+.precautions-list{
+    position: absolute;
+    top: 52vh;
+}

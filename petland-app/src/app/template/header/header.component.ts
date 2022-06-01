@@ -21,10 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   Cadastrar(){
-    const cadastro = this.modal.open(CadastroComponent,{
-      width: "50%",
-      height: "60%"
-    });
+    const cadastro = this.modal.open(CadastroComponent);
   }
 
 }
