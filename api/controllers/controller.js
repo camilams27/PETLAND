@@ -37,6 +37,10 @@ module.exports = {
         })
 
         try{
+            const loginClient = await Client.findOne({ login: login }).exec();
+            if(loginClient) {
+               return response.status(400).json({message: 'login já existente'})
+            }
             await client.save();
             return response.status(201).json({message: 'usuário adicionado'})
         }catch (error){
@@ -62,7 +66,7 @@ module.exports = {
     async deleteClient(request, response){
         try{
             const { login } = request.params;
-            await Client.remove({ login })
+            await Client.deleteOne({ login })
             return response.status(200).json({message : 'usuário deletado.'})
         }catch(error){
             response.status(500).json({error: error.message})
