@@ -37,12 +37,12 @@
     align-items: center;
     display: flex;
     overflow: hidden;
-    padding-left: 28vh;
-  }
-  :host /deep/ .mat-flat-button {
+    padding-left: 47vh;
+}
+:host /deep/ .mat-flat-button {
     background-color: #47b8eabf;
     color: #fff;
-    left: 86vh;
+    left: 106vh;
     top: 86vh;
     position: absolute;
 }
