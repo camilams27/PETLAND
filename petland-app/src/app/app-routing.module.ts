@@ -1,32 +1,37 @@
+import { FaleConoscoComponent } from './views/fale-conosco/fale-conosco.component';
+import { UrgenciaComponent } from './views/urgencia/urgencia.component';
+import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { AgendaComponent } from './components/agenda/agenda.component';
-import { LocaisComponent } from './components/locais/locais.component';
 
-import { LoginPageComponent } from './components/login-page/login-page.component';
-import { SaudeComponent } from './components/saude/saude.component';
+import { InitialPageComponent } from './views/initial-page/initial-page.component';
+import { HomePageComponent } from './views/home-page/home-page.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component: AppComponent
+    path: '',
+    component: InitialPageComponent
   },
   {
-    path:'login',
-    component: LoginPageComponent
+    path: 'cadastro',
+    component: CadastroComponent
   },
   {
-    path:'agenda',
-    component: AgendaComponent
+    path: 'home',
+    component: HomePageComponent
   },
   {
-    path:'saude',
-    component: SaudeComponent
+    path: 'agendas',
+    component: AgendasNavComponent
   },
   {
-    path:'locais',
-    component: LocaisComponent
+    path: 'urgencia',
+    component: UrgenciaComponent
+  },
+  {
+    path: 'fale-conosco',
+    component: FaleConoscoComponent
   }
 ];
 

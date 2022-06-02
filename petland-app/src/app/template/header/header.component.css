@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #70B5EA;
+}
+
+#buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+button{
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+img{
+    height: 3rem;
+}

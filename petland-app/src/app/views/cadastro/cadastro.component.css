@@ -1,0 +1,23 @@
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+
+#cancel{
+    background-color: brown;
+}
+
+#create{
+    background-color: rgb(6, 112, 6);
+}

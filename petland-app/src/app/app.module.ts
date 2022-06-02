@@ -3,13 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponentComponent } from './template/header-component/header-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { ContentComponentComponent } from './template/content-component/content-component.component';
-import { LoginPageComponent } from './components/login-page/login-page.component';
-import { FooterComponentComponent } from './template/footer-component/footer-component.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -17,23 +12,40 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
-import { AgendaComponent } from './components/agenda/agenda.component';
-import { SaudeComponent } from './components/saude/saude.component';
-import { LocaisComponent } from './components/locais/locais.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatListModule} from '@angular/material/list';
 
-
+import { HeaderComponent } from './template/header/header.component';
+import { FooterComponent } from './template/footer/footer.component';
+import { HomePageComponent } from './views/home-page/home-page.component';
+import { InitialPageComponent } from './views/initial-page/initial-page.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
+import { LoginComponent } from './views/login/login.component';
+import { NavComponent } from './template/nav/nav.component';
+import { AgendaPetComponent } from './views/agenda-pet/agenda-pet.component';
+import { AddPetComponent } from './views/add-pet/add-pet.component';
+import { FaleConoscoComponent } from './views/fale-conosco/fale-conosco.component';
+import { UrgenciaComponent } from './views/urgencia/urgencia.component';
+import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponentComponent,
-    ContentComponentComponent,
-    FooterComponentComponent,
+    HeaderComponent,
+    FooterComponent,
     HomePageComponent,
-    LoginPageComponent,
-    AgendaComponent,
-    SaudeComponent,
-    LocaisComponent
+    InitialPageComponent,
+    CadastroComponent,
+    LoginComponent,
+    NavComponent,
+    AgendaPetComponent,
+    AddPetComponent,
+    FaleConoscoComponent,
+    UrgenciaComponent,
+    AgendasNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +57,12 @@ import { LocaisComponent } from './components/locais/locais.component';
     MatSidenavModule,
     MatIconModule,
     MatInputModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatListModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     
   ],
   providers: [],
