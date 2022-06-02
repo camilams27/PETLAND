@@ -15,6 +15,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
@@ -28,6 +29,7 @@ import { AddPetComponent } from './views/add-pet/add-pet.component';
 import { FaleConoscoComponent } from './views/fale-conosco/fale-conosco.component';
 import { UrgenciaComponent } from './views/urgencia/urgencia.component';
 import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
+import { EquipeComponent } from './views/equipe/equipe.component';
 
 
 @NgModule({
@@ -45,6 +47,7 @@ import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
     FaleConoscoComponent,
     UrgenciaComponent,
     AgendasNavComponent,
+    EquipeComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatListModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

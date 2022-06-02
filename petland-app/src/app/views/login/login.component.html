@@ -1,16 +1,17 @@
 <h1 mat-dialog-title> Entrar </h1>
-<div mat-dialog-content>
-  <p>Login</p>
+<div mat-dialog-content id="login-container">
   <mat-form-field appearance="fill">
-    <input matInput >
+    <mat-label>Login</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Senha</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
   </mat-form-field>
 </div>
-<div mat-dialog-content>
-    <p>Senha</p>
-    <mat-form-field appearance="fill">
-      <input matInput type="password">
-    </mat-form-field>
-  </div>
 <div class="buttons">
   <button mat-button id="cancel"> Cancelar </button>
   <button mat-button id="next" routerLink="/home"> Entrar </button>

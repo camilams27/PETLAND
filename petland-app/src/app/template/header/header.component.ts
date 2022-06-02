@@ -3,6 +3,7 @@ import { LoginComponent } from './../../views/login/login.component';
 import { Component, OnInit } from '@angular/core';
 
 import {MatDialog} from '@angular/material/dialog';
+import { FaleConoscoComponent } from 'src/app/views/fale-conosco/fale-conosco.component';
 
 @Component({
   selector: 'app-header',
@@ -27,4 +28,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  FaleConosco(){
+    const FaleConosco = this.modal.open(FaleConoscoComponent);
+  }
 }
