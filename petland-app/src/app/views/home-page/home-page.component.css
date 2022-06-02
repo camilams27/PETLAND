@@ -6,9 +6,8 @@
     background-color: #fff;
 }
 
-:host /deep/ .mat-tab-group {
-    flex-direction: row;
-    overflow: hidden;
+:host /deep/ .mat-card  {
+    box-shadow: none;
   }
   :host /deep/ .mat-tab-header {
     border-bottom: none;
@@ -47,30 +46,18 @@
     position: absolute;
 }
 
-  #pets img{
-    width: 160px;
-    margin-bottom: 50vh;
-    height: 160px;
+.home-container{
+    margin-left: 7vh;
+    margin-right: 7vh;
+}
+.home-content{
+    display: inline-flex;
+    justify-content: space-around;
+    column-gap: 12%;
+}
+.home-read-more{
+    background: #8dc4eec9;
+    color: #fff;
+    padding: 0 23px;
 }
 
-.pet-name{
-    border-bottom: 3px solid #90c9f6;
-    margin-bottom: 68vh;
-    margin-left: 24vh;
-}
-
-.infos-pet{
-    margin-left: -18vh;
-    margin-bottom: 34vh;
-}
-.infos-pet h3{
-    font-weight: 500;
-}
-.precautions{
-    border-bottom: 3px solid #90c9f6;
-    position: absolute;
-}
-.precautions-list{
-    position: absolute;
-    top: 52vh;
-}

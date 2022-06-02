@@ -1,38 +1,48 @@
 <app-nav></app-nav>
-<section id="about">
-    <mat-tab-group animationDuration="0ms" id="pets" mat-align-tabs="center">
-        <mat-tab label="PET 01">
-            <img src="https://i.ibb.co/FhXx0wN/gato-freepik-freepic-diller-970x550.jpg" alt=""> 
-            <h2 class="pet-name">PET 01</h2>
-            <div class="infos-pet">
-                <h3>Nascimento: 00/00/0000</h3>
-                <h3>Idade: 3 anos</h3>
-                <h3>Raça: Frajola</h3>
-            </div>
-            <h2 class="precautions">Cuidados</h2>
-            <ul class="precautions-list">
-                <li>Aplique antiparasitas também em animais que ficam apenas em casa</li>
-                <li>Substitua bebedouros por fontes</li>
-                <li>Sempre instale tela nas janelas</li>
-            </ul>  
-            <button mat-flat-button>Agenda</button>
-        </mat-tab>
-        <mat-tab label="PET 02">
-            <img src="https://i.ibb.co/qs1tTWp/01-domesticated-dog.jpg" alt=""> 
-            <h2 class="pet-name">PET 02</h2>
-            <div class="infos-pet">
-                <h3>Nascimento: 00/00/0000</h3>
-                <h3>Idade: 3 anos</h3>
-                <h3>Raça: Cachorro</h3>
-            </div>
-            <h2 class="precautions">Cuidados</h2>
-            <ul class="precautions-list">
-                <li>Prepare a casa para o pet</li>
-                <li>Antipulgas e remédio para carrapato</li>
-                <li>O cão sozinho em casa</li>
-            </ul>  
-            <button mat-flat-button>Agenda</button>
-        </mat-tab>
-      </mat-tab-group>
-</section>
+<div class="home-container">
+    <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>Cachorro</mat-card-title>
+        </mat-card-title-group>
+        <div class="home-content">
+            <mat-card-content>
+                O cão (nome científico: Canis lupus familiaris),[1] no Brasil também chamado de cachorro, é um mamífero carnívoro da família dos canídeos, subespécie do lobo, e talvez o mais antigo animal domesticado pelo ser humano. Teorias postulam que surgiu do lobo cinzento no continente asiático há mais de 100 000 anos. Ao longo dos séculos, através da domesticação, o ser humano realizou uma seleção artificial dos cães por suas aptidões, características físicas ou tipos de comportamento. O resultado foi uma grande diversidade de raças caninas, as quais variam em pelagem e tamanho dentro de suas próprias raças, atualmente classificadas em diferentes grupos ou categorias.
+            </mat-card-content>
+            <img mat-card-lg-image src="https://i.ibb.co/JtJ7qxw/83-838830-white-background-wallpapers-and-images-wallpapers-dog-wallpaper.jpg" >
+        </div>
+        <mat-card-actions align="end">
+            <button class="home-read-more" mat-button>Saiba mais</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>Cachorro e gato</mat-card-title>
+        </mat-card-title-group>
+        <div class="home-content">
+            <mat-card-content>
+                O cão (nome científico: Canis lupus familiaris),[1] no Brasil também chamado de cachorro, é um mamífero carnívoro da família dos canídeos, subespécie do lobo, e talvez o mais antigo animal domesticado pelo ser humano. Teorias postulam que surgiu do lobo cinzento no continente asiático há mais de 100 000 anos. Ao longo dos séculos, através da domesticação, o ser humano realizou uma seleção artificial dos cães por suas aptidões, características físicas ou tipos de comportamento. O resultado foi uma grande diversidade de raças caninas, as quais variam em pelagem e tamanho dentro de suas próprias raças, atualmente classificadas em diferentes grupos ou categorias.
+            </mat-card-content>
+            <img mat-card-lg-image src="https://i.ibb.co/LJFsYLr/caes-gatos.jpg" >
+        </div>
+        <mat-card-actions align="end">
+            <button class="home-read-more" mat-button>Saiba mais</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>Gato</mat-card-title>
+        </mat-card-title-group>
+        <div class="home-content">
+            <mat-card-content>
+                O cão (nome científico: Canis lupus familiaris),[1] no Brasil também chamado de cachorro, é um mamífero carnívoro da família dos canídeos, subespécie do lobo, e talvez o mais antigo animal domesticado pelo ser humano. Teorias postulam que surgiu do lobo cinzento no continente asiático há mais de 100 000 anos. Ao longo dos séculos, através da domesticação, o ser humano realizou uma seleção artificial dos cães por suas aptidões, características físicas ou tipos de comportamento. O resultado foi uma grande diversidade de raças caninas, as quais variam em pelagem e tamanho dentro de suas próprias raças, atualmente classificadas em diferentes grupos ou categorias.
+            </mat-card-content>
+            <img mat-card-lg-image src="https://i.ibb.co/VwYWtPf/cute-cat-white-background-lovely-pet-cute-cat-white-background-124435681.jpg" >
+        </div>
+        <mat-card-actions align="end">
+            <button class="home-read-more" mat-button>Saiba mais</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
 <router-outlet></router-outlet>
