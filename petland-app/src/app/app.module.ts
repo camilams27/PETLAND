@@ -65,7 +65,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTabsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
