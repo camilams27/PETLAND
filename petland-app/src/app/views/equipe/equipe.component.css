@@ -3,19 +3,19 @@ h1{
     font-size: 30px;
 }
 
-mat-card-content{
+#cards{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-mat-card-content > p{
+.card{
+    display: flex;
+    align-items: center;
     width: 50%;
-}
-
-mat-card-title, mat-card-subtitle{
-    padding-left: 10%;
 }
 
 mat-card-subtitle{
@@ -23,6 +23,5 @@ mat-card-subtitle{
 }
 
 img, mat-card-lg-image{
-    height: 2%;
     border-radius: 10px;
 }
