@@ -70,6 +70,9 @@ import { EquipeComponent } from './views/equipe/equipe.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
