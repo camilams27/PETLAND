@@ -1,32 +1,34 @@
-<h1 mat-dialog-title> Fale Conosco </h1>
-<div mat-dialog-content id="help-container">
-  <mat-form-field appearance="fill">
-  <mat-label>Nome</mat-label>
-  <input matInput>
-</mat-form-field>
-
-<mat-form-field appearance="fill">
-  <mat-label>Email</mat-label>
-  <input matInput>
-</mat-form-field>
-
-<mat-form-field appearance="fill">
-  <mat-label>Qual o seu Problema?</mat-label>
-  <select matNativeControl required id="opçoes"> 
-    <option value="erro1">Dúvidas</option> 
-    <option value="erro2">Esqueci Minha Senha</option>
-    <option value="erro3">Reportar Erros Gramaticais</option>  
-    <option value="erro4">Reportar Erros Visuais</option>  
-    </select>
+<div class="mainContainer">
+  <h1 mat-dialog-title> Fale Conosco </h1>
+  <div mat-dialog-content id="help-container">
+    <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput>
   </mat-form-field>
 
-<mat-form-field appearance="fill">
-  <mat-label>Descreva aqui o seu Problema!</mat-label>
-  <textarea matInput></textarea>
-</mat-form-field>
-</div>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput>
+  </mat-form-field>
 
-<div class="buttons">
-  <button mat-button id="cancel"> Cancelar </button>
-  <button mat-button id="next" routerLink="/home"> Enviar </button>
+  <mat-form-field appearance="fill">
+    <mat-label>Qual o seu Problema?</mat-label>
+    <select matNativeControl required id="opçoes"> 
+      <option value="erro1">Dúvidas</option> 
+      <option value="erro2">Esqueci Minha Senha</option>
+      <option value="erro3">Reportar Erros Gramaticais</option>  
+      <option value="erro4">Reportar Erros Visuais</option>  
+      </select>
+    </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descreva aqui o seu Problema!</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+  </div>
+
+  <div class="buttons">
+    <button mat-button id="cancel"> Cancelar </button>
+    <button mat-button id="next" routerLink="/home"> Enviar </button>
+  </div>
 </div>

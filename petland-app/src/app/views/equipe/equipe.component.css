@@ -2,3 +2,27 @@ h1{
     text-align: center;
     font-size: 30px;
 }
+
+mat-card-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+mat-card-content > p{
+    width: 50%;
+}
+
+mat-card-title, mat-card-subtitle{
+    padding-left: 10%;
+}
+
+mat-card-subtitle{
+    margin-bottom: 0;
+}
+
+img, mat-card-lg-image{
+    height: 2%;
+    border-radius: 10px;
+}
