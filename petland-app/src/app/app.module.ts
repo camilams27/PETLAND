@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -29,7 +30,7 @@ import { AddPetComponent } from './views/add-pet/add-pet.component';
 import { FaleConoscoComponent } from './views/fale-conosco/fale-conosco.component';
 import { UrgenciaComponent } from './views/urgencia/urgencia.component';
 import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,9 @@ import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
     MatNativeDateModule,
     MatListModule,
     MatTabsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
