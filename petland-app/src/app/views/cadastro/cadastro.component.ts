@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { ClientServiceService } from 'src/app/services/client-service.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-cadastro',
@@ -16,7 +17,7 @@ export class CadastroComponent implements OnInit {
   ngOnInit(): void {
     this.formulario = new FormGroup({
       nome : new FormControl(''),
-      ultimoNome : new FormControl(''),
+      login : new FormControl(''),
       telefone : new FormControl(''),
       email : new FormControl(''),
       dataNasc : new FormControl(''),
@@ -25,8 +26,16 @@ export class CadastroComponent implements OnInit {
     console.log(this.service.getClients())
   }
 
-  createClient() { 
-    console.log(this.formulario.value)
+  async createClient() {
+    console.log(moment(this.formulario.value['dataNasc']).format('DD/MM/YYYY').toString());
+    console.log(await this.service.createClient({
+      nome: this.formulario.value['nome'],
+      login: this.formulario.value['login'],
+      telefone: this.formulario.value['telefone'],
+      email: this.formulario.value['email'],
+      dataNasc: moment(this.formulario.value['dataNasc']).format('DD/MM/YYYY').toString(),
+      senha: this.formulario.value['senha']
+    }))
   }
 
 }

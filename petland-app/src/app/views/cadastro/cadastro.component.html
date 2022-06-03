@@ -11,11 +11,11 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-    <mat-label>Ultimo Nome</mat-label>
+    <mat-label>Login</mat-label>
     <input 
         matInput 
-        name="ultimo nome"
-        formControlName="ultimoNome"
+        name="login"
+        formControlName="login"
         type="text">
     </mat-form-field>
 
@@ -29,12 +29,14 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-        <mat-label>Choose a date</mat-label>
+        <mat-label>Data de Nascimento</mat-label>
         <input [matDatepicker]="picker" 
             matInput 
             name="data nascimento"
-            formControlName="dataNasc">
-        <mat-hint>MM/DD/YYYY</mat-hint>
+            formControlName="dataNasc"
+            type="date"
+            mask="00/00/0000">
+        <mat-hint>DD/MM/YYYY</mat-hint>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>

@@ -9,7 +9,12 @@ export class ClientServiceService {
   constructor(private http: HttpClient) { }
 
   async getClients() {
-    return await this.http.get<any>('http://localhost:3333/clients').subscribe(testes=>console.log('testeeeeeweeergfgh'))
+    return this.http.get<any>('http://localhost:3333/clients').subscribe(testes=>console.log('testeeeeeweeergfgh'))
   }
+
+  async createClient(client: any) {
+    return this.http.post<any>('http://localhost:3333/clients',client).subscribe(testes=>console.log('criou'))
+  }
+
 
 }
