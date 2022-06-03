@@ -64,7 +64,7 @@ a{
     color: white;
 }
 
-/* -----------------SOBRE / FEATURES-----------------  */
+/* -----------------SOBRE-----------------  */
 
 #about{
     display: flex;
@@ -116,13 +116,19 @@ a{
     display: flex;
 }
 #features img{
-    margin-top: 38vh;
-    width: 592px;
-    height: 388px;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-.cardTitle{
-    font-size: 1rem;
+.infoNos{
+    width: 70%;
+}
+
+.mat-tab{
+    display: flex;
+    gap: 1rem;
 }
 
 .imgCard{

@@ -1,46 +1,17 @@
-:host /deep/ .mat-dialog-container {
-    border: 3px solid #71C8EF;
-    transform: none;
-}
-:host /deep/ .mat-form-field-flex{
-    border: 1px solid #726D6D;
-    border-radius: none;
-}
-:host /deep/ .mat-form-field-appearance-fill .mat-form-field-flex{
-    border-radius: 0;
-}
-:host /deep/ .mat-form-field-appearance-fill .mat-form-field-underline::before{
-    background-color: transparent;
-}
-:host /deep/ .mat-form-field.mat-focused .mat-form-field-label {
-    color: #726D6D;
-}
-:host /deep/ .mat-form-field.mat-focused .mat-form-field-ripple {
-    background-color: transparent;
-}
-:host /deep/ .mat-form-field-flex {
-    width: 417px;
-    background-color: transparent;
-}
-:host /deep/ .mat-button {
-    width: 419px;
-    margin-bottom: 3px;
-}
-.login-container{
-    width: 417px;
-    height: 439px;
-}
-
 h1{
     text-align: center;
 }
 
+.campos{
+    display: flex;
+    flex-direction: column;
+}
+
 .buttons{
-    display: block;
+    display: flex;
     justify-content: space-between;
     color: white;
 }
-
 
 #cancel{
     background-color: brown;

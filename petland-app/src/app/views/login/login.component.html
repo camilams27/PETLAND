@@ -1,19 +1,20 @@
-<div class="login-container">
+<form class="login-container">
   <h1 mat-dialog-title> Entrar </h1>
-  <div mat-dialog-content>
+  <div class="campos">
     <mat-form-field appearance="fill">
-      <mat-label>Usuário</mat-label>
+      <mat-label>Login</mat-label>
       <input matInput >
     </mat-form-field>
-  </div>
-  <div mat-dialog-content>
     <mat-form-field appearance="fill">
       <mat-label>Senha</mat-label>
-      <input matInput type="password">
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
     </mat-form-field>
   </div>
   <div class="buttons">
     <button mat-button id="next" routerLink="/home"> Entrar </button>
     <button mat-button id="cancel"> Cancelar </button>
   </div>
-</div>
+</form>
