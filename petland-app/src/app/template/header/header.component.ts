@@ -17,15 +17,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Entrar(){
+  Entrar() {
     const entrar = this.modal.open(LoginComponent);
   }
 
-  Cadastrar(){
+  Cadastrar() {
     const cadastro = this.modal.open(CadastroComponent);
   }
 
-  FaleConosco(){
+  FaleConosco() {
     const FaleConosco = this.modal.open(FaleConoscoComponent);
   }
 }
