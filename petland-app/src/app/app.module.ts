@@ -17,6 +17,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
@@ -31,6 +32,8 @@ import { FaleConoscoComponent } from './views/fale-conosco/fale-conosco.componen
 import { UrgenciaComponent } from './views/urgencia/urgencia.component';
 import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EquipeComponent } from './views/equipe/equipe.component';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +50,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FaleConoscoComponent,
     UrgenciaComponent,
     AgendasNavComponent,
+    EquipeComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +69,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTabsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
