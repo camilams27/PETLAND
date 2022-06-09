@@ -10,6 +10,7 @@ import { ClientServiceService } from 'src/app/services/client-service.service';
 })
 export class CadastroComponent implements OnInit {
   formulario: FormGroup;
+  hide = true;
   constructor(private router: Router, private service: ClientServiceService) { }
 
   ngOnInit(): void {

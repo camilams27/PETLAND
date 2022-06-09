@@ -1,0 +1,63 @@
+
+#about{
+    display: flex;
+    justify-content: space-between;
+    height: 101vh;
+    background-color: #fff;
+}
+
+:host /deep/ .mat-card  {
+    box-shadow: none;
+  }
+  :host /deep/ .mat-tab-header {
+    border-bottom: none;
+    background-color: #90c9f670;;
+    align-items: center;
+  }
+  :host /deep/ .mat-tab-header-pagination {
+    display: none !important;
+  }
+  :host /deep/ .mat-tab-label-active {
+    background-color: #70b5ea;
+  }
+  :host /deep/ .mat-tab-labels {
+    flex-direction: column;
+  }
+  :host /deep/ .mat-ink-bar {
+    height: 100%;
+    display: none;
+    left: 98% !important;
+  }
+  :host /deep/ .mat-tab-body-wrapper {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+  :host /deep/ .mat-tab-body-content {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    padding-left: 47vh;
+}
+:host /deep/ .mat-flat-button {
+    background-color: #47b8eabf;
+    color: #fff;
+    left: 106vh;
+    top: 86vh;
+    position: absolute;
+}
+
+.home-container{
+    margin-left: 7vh;
+    margin-right: 7vh;
+}
+.home-content{
+    display: inline-flex;
+    justify-content: space-around;
+    column-gap: 12%;
+}
+.home-read-more{
+    background: #8dc4eec9;
+    color: #fff;
+    padding: 0 23px;
+}
+

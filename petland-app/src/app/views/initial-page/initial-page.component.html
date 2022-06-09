@@ -7,9 +7,7 @@
             
             <section class="info">
                 <h1>PETLAND</h1>
-                <p class="contentProject"> This project is a place for readers, created with angular framework.
-                    <br/>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor lorem mauris, eget placerat libero dictum eget. Phasellus non erat lectus. In convallis, orci eu rutrum scelerisque, orci erat condimentum magna, vel rutrum quam ante tempus augue. Mauris scelerisque molestie gravida. 
+                <p class="contentProject">O Paraíso Perfeito para o seu PET! 
                 </p>
                 <div class="infoBtn">
                     <button mat-button > <a href="#features">saiba mais</a> </button>
@@ -20,34 +18,15 @@
     </mat-card>
     
     <section id="about">
-        <nav> <h2> Sobre </h2> </nav>
-        <div id="infoProject"> texto 
-            <div id="features">
-            <mat-card class="card">
-                <mat-card-content  routerLink="/agenda">
-                    <img src="assets/images/pet-album.png" alt="pet note" id="note" class="imgCard">
-                </mat-card-content>
-                <mat-card-title class="cardTitle">
-                    Acompanhe a trajetória de seu pet!
-                </mat-card-title>
-            </mat-card>
-            <mat-card class="card" routerLink="/saude">
-                <mat-card-content>
-                    <img src="assets/images/cat-picture.png" alt="pet picture" id="picture" class="imgCard">
-                </mat-card-content>
-                <mat-card-title class="cardTitle">
-                    Receba informações para a saúde de seu pet!
-                </mat-card-title>
-            </mat-card>
-            <mat-card class="card" routerLink="/locais">
-                <mat-card-content>
-                    <img src="assets/images/map.png" alt="mapa" id="map" class="imgCard">
-                </mat-card-content>
-                <mat-card-title class="cardTitle">
-                    Encontre lugares.
-                </mat-card-title>
-            </mat-card>
-            </div>
-        </div>
+        <mat-tab-group animationDuration="0ms" id="features" mat-align-tabs="center">
+            <mat-tab label="Sobre">
+                <p class="infoNos">O presente projeto dos discentes Camila Silva, Gracielle José e Luiz Gabriel, supervisionado pelo docente Bruno Cartaxo. Tem como intuito construir uma aplicação web responsiva, de fomra que possa ajudar guardiões de pets com organização de informações relevantes para seus pets e implementar reconhecimento de imagens, afim de ajudar na construção das dicas e cuidados. Além disso, trazer notícias de eventos próximos com base na localização.</p>
+                <img src="https://i.ibb.co/71drGzT/cachorro-e-gato.png" alt=""> 
+            </mat-tab>
+            <mat-tab label="Nossos serviços">
+                <p class="infoNos">Sabemos o quão difícil é ser pai ou mãe de pets, e como pode ser estressante não saber informações importante para a criação do seu bichinho. Por este motivo criamos uma aplicação em que você obtem uma agenda personalizada de acordo com seu pet, podendo fazer anotações e criar lembretes. Além disso, seja atualizado de notícias e eventos relacionados a bichinhos de estimações através da localização. Experimente nosso sistema de reconhecimento de raças, que com uma foto do seu bichinho reconhece a sua raça e lhe mostrará cuidados e curiosidades sobre ela.</p>
+                <img src="https://i.ibb.co/71drGzT/cachorro-e-gato.png" alt="">
+            </mat-tab>
+          </mat-tab-group>
     </section>
 </main>

@@ -1,4 +1,5 @@
-*{
+*
+{
     box-sizing: border-box;
 }
 
@@ -17,7 +18,7 @@ main{
 .home{
     border-radius: 0%;
     padding: 0;
-    height: 90vh;
+    height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +53,20 @@ button{
 }
 
 h1{
+    font-size: 30px ;
+    font-family:fantasy;
     margin: 0;
+}
+
+p{
+    font-size: 20px;
+    margin: 0;
+}
+
+#infoProject{
+    font-size: 20px;
+    margin: 0;
+
 }
 
 .logo > img{
@@ -64,33 +78,49 @@ a{
     color: white;
 }
 
-/* -----------------SOBRE / FEATURES-----------------  */
+/* -----------------SOBRE-----------------  */
 
 #about{
     display: flex;
     justify-content: space-between;
+    height: 101vh;
+    background-color: #fff;
 }
 
-#about > nav{
-    color: #258BB7;
-    background-color: #69c6ee0a;
-    width: 25%;
-    display: flex;
+:host /deep/ .mat-tab-group {
+    flex-direction: row;
+    overflow: hidden;
+  }
+  :host /deep/ .mat-tab-header {
+    border-bottom: none;
+    background-color: #90c9f670;;
     align-items: center;
-    justify-content: center;
-}
+  }
+  :host /deep/ .mat-tab-header-pagination {
+    display: none !important;
+  }
+  :host /deep/ .mat-tab-label-active {
+    background-color: #70b5ea;
+  }
+  :host /deep/ .mat-tab-labels {
+    flex-direction: column;
+  }
+  :host /deep/ .mat-ink-bar {
+    height: 100%;
+    display: none;
+    left: 98% !important;
+  }
+  :host /deep/ .mat-tab-body-wrapper {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+  :host /deep/ .mat-tab-body-content {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    padding-left: 28vh;
+  }
 
-h2{
-    width: 100%;
-    background-color: #69c6ee59;
-    text-align: center;
-}
-
-h2:hover{
-    transition: .5;
-    background-color: #3896becb;
-    color: white;
-}
 
 #infoProject{
     text-align: center;
@@ -99,9 +129,20 @@ h2:hover{
 #features{
     display: flex;
 }
+#features img{
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
-.cardTitle{
-    font-size: 1rem;
+.infoNos{
+    width: 70%;
+}
+
+.mat-tab{
+    display: flex;
+    gap: 1rem;
 }
 
 .imgCard{

@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InitialPageComponent } from './views/initial-page/initial-page.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
+import { EquipeComponent } from './views/equipe/equipe.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'fale-conosco',
     component: FaleConoscoComponent
+  },
+  {
+    path: 'equipe',
+    component: EquipeComponent
   }
 ];
 

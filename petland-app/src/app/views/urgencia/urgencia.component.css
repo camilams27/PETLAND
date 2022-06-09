@@ -1,0 +1,26 @@
+h1{ 
+    text-align: center;
+
+}
+.search-box{
+    background: #ffffff;
+    border: 1px solid #70B5EA;
+    padding: 3%;
+}
+.search-list{
+    background: #fff;
+    border: 1px solid #70B5EA;
+    border-top: none;
+}
+.search-list h3{
+    background: #92c9f3;
+    padding: 1%;
+    margin-bottom: 0%;
+    text-align: center;
+}
+
+.barra{
+    text-align: center;
+    line-height: 4;
+    width: 100%; 
+}

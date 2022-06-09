@@ -2,17 +2,21 @@ h1{
     text-align: center;
 }
 
+.campos{
+    display: flex;
+    flex-direction: column;
+}
+
 .buttons{
     display: flex;
     justify-content: space-between;
     color: white;
 }
 
-
 #cancel{
     background-color: brown;
 }
 
 #next{
-    background-color: rgb(6, 112, 6);
+    background-color: #71C8EF;
 }

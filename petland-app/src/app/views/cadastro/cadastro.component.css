@@ -10,7 +10,7 @@ h1{
 
 .buttons{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     color: white;
 }
 
@@ -19,5 +19,5 @@ h1{
 }
 
 #create{
-    background-color: rgb(6, 112, 6);
+    background-color: #71C8EF;
 }
