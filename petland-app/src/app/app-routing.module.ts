@@ -8,6 +8,7 @@ import { InitialPageComponent } from './views/initial-page/initial-page.componen
 import { HomePageComponent } from './views/home-page/home-page.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { EquipeComponent } from './views/equipe/equipe.component';
+import { LocaisComponent } from './template/locais/locais.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'equipe',
     component: EquipeComponent
+  },
+  {
+    path: 'locais',
+    component: LocaisComponent
   }
 ];
 
