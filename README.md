@@ -43,6 +43,9 @@ Criamos as telas que estão localizadas na pasta de views, as telas são:
 - NodeJs, Mongoose e Express - construção api
 	> 
 
+### Localização
+- API - Leaflet [link](https://leafletjs.com/)
+
 #### Materiais
 - https://www.youtube.com/watch?v=BPBhfjSPxRo&list=PL8YNlUoOZkkYF34FluvXLBu2cK9fl2E3L
 	
