@@ -1,5 +1,4 @@
-<app-nav></app-nav>
-<section id="about">
+<!-- <section id="about">
     <mat-tab-group animationDuration="0ms" id="pets" mat-align-tabs="center">
         <mat-tab label="PET 01">
             <img src="https://i.ibb.co/FhXx0wN/gato-freepik-freepic-diller-970x550.jpg" alt=""> 
@@ -34,5 +33,20 @@
             <button mat-flat-button>Agenda</button>
         </mat-tab>
       </mat-tab-group>
-</section>
-<router-outlet></router-outlet>
+</section> -->
+
+<article>
+    <h1>Agendas PET</h1>
+    <section class="agendas">
+        <div *ngFor="let pet of pets" (click)="agendaPet(pet)" class="pets">
+            <img src="{{ pet.imagemPet }}" alt="">
+            <h3>{{ pet.nomePet }}</h3>
+        </div>
+    </section>
+    <section class="agendas">
+        <div (click)="adicionarPet()">
+            <div class="mais"></div>
+            <h3> Adicionar PET</h3>
+        </div>
+    </section>
+</article>

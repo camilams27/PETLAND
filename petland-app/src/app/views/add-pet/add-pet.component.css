@@ -1,0 +1,48 @@
+.formAgenda{
+    display: grid;
+    grid-template-areas: 
+        "imagem inputNome"
+        "inputImage inputData"
+    ;
+    grid-gap: 1rem;
+}
+
+img{
+    height: 10rem;  
+}
+
+.info, .upload-image{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.imagem{
+    grid-area: imagem;
+}
+
+.inputImagem{
+    grid-area: inputImagem;
+}
+
+.inputNome{
+    grid-area: inputNome;
+}
+
+.inputData{
+    grid-area: inputData;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+#cancel{
+    background-color: brown;
+}
+
+#create{
+    background-color: #71C8EF;
+}

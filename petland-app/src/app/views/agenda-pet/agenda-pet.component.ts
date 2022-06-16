@@ -1,4 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+export interface DialogData {
+  pet: {
+    nomePet: string;
+    idade: string;
+    imagemPet: string;
+    raca: string;
+    cuidados: string;
+  }
+}
 
 @Component({
   selector: 'app-agenda-pet',
@@ -7,9 +18,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgendaPetComponent implements OnInit {
 
-  constructor() { }
+ 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
   ngOnInit(): void {
+    console.log(this.data)
   }
 
+  
+  
 }

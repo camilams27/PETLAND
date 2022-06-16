@@ -18,6 +18,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
 
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
@@ -33,6 +35,7 @@ import { UrgenciaComponent } from './views/urgencia/urgencia.component';
 import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EquipeComponent } from './views/equipe/equipe.component';
+import { DadosComponent } from './data/dados/dados.component';
 
 
 @NgModule({
@@ -51,6 +54,7 @@ import { EquipeComponent } from './views/equipe/equipe.component';
     UrgenciaComponent,
     AgendasNavComponent,
     EquipeComponent,
+    DadosComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +76,8 @@ import { EquipeComponent } from './views/equipe/equipe.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

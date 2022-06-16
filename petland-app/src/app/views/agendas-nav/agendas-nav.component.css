@@ -1,4 +1,4 @@
-
+/* 
 #about{
     display: flex;
     justify-content: space-between;
@@ -73,4 +73,47 @@
 .precautions-list{
     position: absolute;
     top: 52vh;
+} */
+
+.agendas{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  text-align: center;
+}
+
+img{
+  height: 10rem;
+  width: 10rem;
+}
+
+article{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.agendas > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mais{
+  background-image: url(../../../assets/images/more.png);
+  background-size: cover;
+  height: 10rem;
+  width: 10rem;
+}
+
+.pets:hover{
+  cursor: pointer;
 }

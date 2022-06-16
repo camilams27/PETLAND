@@ -1,0 +1,37 @@
+.modalAgenda{
+    padding: 1rem;
+    
+}
+
+.imagemPet{
+    height: 13rem;
+    width: 13rem;
+    border-radius: 15px;
+}
+
+.infoPet{
+    display: flex;
+    gap: 2rem;
+}
+
+.icones{
+    background-color: #70b5ea;
+    padding: .5rem;
+    display: flex;
+    gap: .2rem;
+    justify-content: space-around;
+    margin-bottom: .5rem;
+}
+
+.btnFechar{
+    background: none;
+    outline: none;
+    border: none;
+    position: relative;
+    left: 0;
+}
+
+.btnFechar:hover{
+    cursor: pointer;
+}
+
