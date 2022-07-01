@@ -64,6 +64,8 @@ Criamos as telas que estão localizadas na pasta de views, as telas são:
 		Utilizamos um modelo pré-treinado, MobileNetV2, é utilizado para reconhecimento de imagens, por ele ter uma quantidade muito grande de camada ele consegue diminuir o overfiting, fazendo com que o gap da precisao diminua.
 	Obtivemos acurácia de **97%**. [link](https://colab.research.google.com/drive/1e6FA25X9fcShPaYjcoDmtyiY_wERVi5_?usp=sharing)
 	> A produção dos tutoriais foi feita para nos ajudar a se adaptar ao conteúdo.
+- Desenvolvendo CNN para web com flask
+	
 #### Materiais
 - https://www.tensorflow.org/js/tutorials?hl=pt-br
 - https://www.tensorflow.org/tutorials/images/cnn?hl=pt
@@ -75,6 +77,11 @@ Criamos as telas que estão localizadas na pasta de views, as telas são:
 - https://www.youtube.com/watch?v=2eYLt1NA4Ss
 - https://www.youtube.com/watch?v=d8U7ygZ48Sc
 - https://github.com/tensorflow/models/tree/master/research/object_detection
+- https://flask.palletsprojects.com/en/2.1.x/tutorial/
+- https://flask.palletsprojects.com/en/2.1.x/quickstart/
+- https://flask.palletsprojects.com/en/2.1.x/tutorial/factory/
+- https://flask.palletsprojects.com/en/2.1.x/patterns/fileuploads/
+- 
 	
 ## Arquivos
 
