@@ -22,7 +22,7 @@ module.exports = {
         } = request.body;
 
         if (!login || !senha || !nome) {
-            return response.status(400).json({ error: 'login ou senha inválidos' });
+            return response.status(200).json({ error: 'login ou senha inválidos' });
         }
 
         const client = new Client({
@@ -37,10 +37,10 @@ module.exports = {
         try {
             const loginClient = await Client.findOne({ login: login }).exec();
             if (loginClient) {
-               return response.status(400).json({ message: 'login já existente' });
+               return response.status(200).json({ message: 'login já existente' });
             }
             await client.save();
-            return response.status(201).json({ message: 'usuário adicionado' });
+            return response.status(201).json({ message: 'usuário adicionado', success: true });
         } catch (error) {
             response.status(500).json({ error: error.message });
         }

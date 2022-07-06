@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {MatDialog} from '@angular/material/dialog';
 import { FaleConoscoComponent } from 'src/app/views/fale-conosco/fale-conosco.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +13,22 @@ import { FaleConoscoComponent } from 'src/app/views/fale-conosco/fale-conosco.co
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public modal:MatDialog){ }
+  logado: boolean;
+  olaLogin: string;
+  loginStorage: any;
+
+  constructor(
+    public modal:MatDialog,
+    private router: Router
+  ){ }
 
   ngOnInit(): void {
+    this.loginStorage = localStorage.getItem('login');
+    if (this.loginStorage) {
+      this.loginStorage = JSON.parse(this.loginStorage);
+      this.logado = this.loginStorage.login;
+      this.olaLogin = this.loginStorage.user;
+    }
   }
 
   Entrar() {
@@ -28,4 +42,12 @@ export class HeaderComponent implements OnInit {
   FaleConosco() {
     const FaleConosco = this.modal.open(FaleConoscoComponent);
   }
+
+  Sair() {
+    localStorage.removeItem('login');
+    this.router.navigate(['/']).then(()=>{
+      window.location.reload();
+    })
+  }
+
 }

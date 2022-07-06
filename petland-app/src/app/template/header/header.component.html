@@ -2,10 +2,15 @@
     <div id="logo">
         <img src="../../../assets/images/pet-house.png" alt="pet house" routerLink="/">
     </div>
-    <div id="buttons">
+    <div id="buttons" *ngIf="!logado">
         <button mat-button (click)="Entrar()">Entrar</button>
         <button mat-button (click)="Cadastrar()">Cadastrar</button>
         <button mat-button (click)="FaleConosco()" >Fale Conosco</button>
         <button mat-button routerLink="/dados"> <mat-icon>list</mat-icon> </button>
+    </div>
+    <div *ngIf="logado">
+        <button mat-button > teste </button>
+        <button mat-button > Olá {{ olaLogin }} </button>
+        <button mat-button (click)="Sair()"> Sair </button>
     </div>
 </header>

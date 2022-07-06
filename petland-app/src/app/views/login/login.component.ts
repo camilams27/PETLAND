@@ -13,7 +13,11 @@ export class LoginComponent implements OnInit {
   hide = true;
   formulario: FormGroup;
 
-  constructor(private service: ClientServiceService, private _snackBar: MatSnackBar, private router: Router) { }
+  constructor(
+    private service: ClientServiceService, 
+    private _snackBar: MatSnackBar, 
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.formulario = new FormGroup({
@@ -28,6 +32,7 @@ export class LoginComponent implements OnInit {
       senha: this.formulario.value.senha
     })).subscribe(login => {
       if(login.success) {
+        localStorage.setItem('login', JSON.stringify({ login: true, user: this.formulario.value['login'] }));
         this.router.navigate(['/home']).then(()=>{
           window.location.reload();
         })
