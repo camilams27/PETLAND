@@ -1,10 +1,13 @@
 .formAgenda{
-    display: grid;
-    grid-template-areas: 
-        "imagem inputNome"
-        "inputImage inputData"
-    ;
-    grid-gap: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
 }
 
 img{
@@ -15,22 +18,6 @@ img{
     display: flex;
     flex-direction: column;
     
-}
-
-.imagem{
-    grid-area: imagem;
-}
-
-.inputImagem{
-    grid-area: inputImagem;
-}
-
-.inputNome{
-    grid-area: inputNome;
-}
-
-.inputData{
-    grid-area: inputData;
 }
 
 .buttons{

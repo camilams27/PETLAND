@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class ClientServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   async getClients() {
     return await this.http.get<any>('http://localhost:3333/clients')

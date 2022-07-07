@@ -35,3 +35,6 @@
     cursor: pointer;
 }
 
+.editIcon:hover, .deletIcon:hover{
+    cursor: pointer;
+}

@@ -1,6 +1,32 @@
 <header>
     <div id="logo">
         <img src="../../../assets/images/pet-house.png" alt="pet house" routerLink="/">
+        <div class="funcionalidades" *ngIf="logado">
+            <h4 mat-button> 
+                <a routerLink="/home">
+                    <i class="material-icons"> home</i> 
+                    Home
+                </a>
+            </h4>
+            <h4 mat-button> 
+                <a routerLink="/agendas">
+                    <i class="material-icons"> library_books </i> 
+                    Agendas
+                </a> 
+            </h4>
+            <h4 mat-button> 
+                <a routerLink="/urgencia">
+                    <i class="material-icons"> local_hospital </i> 
+                    Urgência
+                </a> 
+            </h4>
+            <h4 mat-button> 
+                <a routerLink="/lugares">
+                    <i class="material-icons"> place </i> 
+                    Locais
+                </a>
+            </h4>
+        </div>
     </div>
     <div id="buttons" *ngIf="!logado">
         <button mat-button (click)="Entrar()">Entrar</button>
@@ -8,9 +34,16 @@
         <button mat-button (click)="FaleConosco()" >Fale Conosco</button>
         <button mat-button routerLink="/dados"> <mat-icon>list</mat-icon> </button>
     </div>
-    <div *ngIf="logado">
-        <button mat-button > teste </button>
-        <button mat-button > Olá {{ olaLogin }} </button>
-        <button mat-button (click)="Sair()"> Sair </button>
+    <div *ngIf="logado" class="headerLogado">
+        <div class="funcionalidades">
+            <h4> 
+                Olá, {{ olaLogin }}!
+                <i class="material-icons"> insert_emoticon </i>
+            </h4>
+            <button mat-button class="sair" (click)="Sair()"> 
+                Sair 
+                <i class="material-icons"> logout </i>
+            </button>
+        </div>
     </div>
 </header>

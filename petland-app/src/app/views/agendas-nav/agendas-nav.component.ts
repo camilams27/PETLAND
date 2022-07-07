@@ -2,6 +2,8 @@ import { AgendaPetComponent } from './../agenda-pet/agenda-pet.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddPetComponent } from '../add-pet/add-pet.component';
+import { HttpClient } from '@angular/common/http';
+import { PetService } from 'src/app/services/pet.service';
 
 @Component({
   selector: 'app-agendas-nav',
@@ -9,33 +11,26 @@ import { AddPetComponent } from '../add-pet/add-pet.component';
   styleUrls: ['./agendas-nav.component.css']
 })
 export class AgendasNavComponent implements OnInit {
+  pets: any;
 
-  pets = [
-    {
-      nomePet: 'Jojo',
-      imagemPet: '../../../assets/imagePET/jojo.jpg',
-      idade: '4',
-      raca: 'vira-lata',
-      cuidados:'LOREM'
-    }, 
-    {
-      nomePet: 'Ninho',
-      imagemPet: '../../../assets/imagePET/cat.jpg',
-      idade: '2',
-      raca: 'vira-lata',
-      cuidados:'IPSUM'
-    },{
-      nomePet: 'Mylon',
-      imagemPet: '../../../assets/imagePET/mylon.png',
-      idade: '3',
-      raca: 'poodle',
-      cuidados:'OI'
-    }
-  ];
+  constructor(
+    public modal: MatDialog,
+    private http: HttpClient,
+    private service: PetService 
+  ) { }
 
-  constructor(public modal:MatDialog) { }
+  async ngOnInit() {
+    let loginStorage = localStorage.getItem('login') as any;
+    loginStorage = JSON.parse(loginStorage);
+    (await this.service.getPets(loginStorage.user)).subscribe(pet => {
+      this.update(pet)
+    });
+    
+  }
 
-  ngOnInit(): void {
+  async update(pet: any) {
+    this.pets = pet;
+    console.log(this.pets.pets)
   }
 
   agendaPet(pet: any) {

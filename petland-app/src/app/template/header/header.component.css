@@ -22,3 +22,38 @@ button{
 img{
     height: 3rem;
 }
+
+#logo{
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    gap: 1rem;
+}
+
+h4, a{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+a{
+    font-style: none;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.headerLogado{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+
+.funcionalidades{
+    display: flex;
+    gap: 1rem;
+}
+
+.sair{
+    border: none;
+}

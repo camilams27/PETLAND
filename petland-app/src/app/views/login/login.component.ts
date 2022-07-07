@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       senha: this.formulario.value.senha
     })).subscribe(login => {
       if(login.success) {
-        localStorage.setItem('login', JSON.stringify({ login: true, user: this.formulario.value['login'] }));
+        localStorage.setItem('login', JSON.stringify({ login: true, user: login.nome }));
         this.router.navigate(['/home']).then(()=>{
           window.location.reload();
         })

@@ -38,6 +38,8 @@ import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EquipeComponent } from './views/equipe/equipe.component';
 import { DadosComponent } from './data/dados/dados.component';
+import { LugaresComponent } from './views/lugares/lugares.component';
+import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
 
 
 @NgModule({
@@ -57,6 +59,8 @@ import { DadosComponent } from './data/dados/dados.component';
     AgendasNavComponent,
     EquipeComponent,
     DadosComponent,
+    LugaresComponent,
+    AgendaEditComponent,
   ],
   imports: [
     BrowserModule,
