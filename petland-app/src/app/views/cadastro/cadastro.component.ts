@@ -30,7 +30,6 @@ export class CadastroComponent implements OnInit {
       dataNasc : new FormControl(''),
       senha : new FormControl('')
     })
-    console.log(this.service.getClients())
   }
 
   async createClient() { 

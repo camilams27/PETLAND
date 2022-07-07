@@ -79,26 +79,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 h1{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }
 
 img{
-  height: 10rem;
-  width: 10rem;
+  height: 25vh;
 }
 
 article{
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .agendas > div{
@@ -116,4 +115,9 @@ article{
 
 .pets:hover{
   cursor: pointer;
+}
+
+.pets{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
