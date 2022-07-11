@@ -20,7 +20,7 @@ export class ClientServiceService {
   }
 
   async createClient(client: any): Promise<Observable<any>> {
-    return this.http.post<any>('http://localhost:3333/clients', client)
+    return this.http.post<any>('https://teste-355700.uc.r.appspot.com/clients', client)
   }
 
 }
