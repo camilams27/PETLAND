@@ -1,9 +1,0 @@
-link do colab, em que foi reproduzindo tutorial para conhecimento e adaptação da ferramenta - Tensorflow.
-
-https://colab.research.google.com/drive/1AyuuWI40bVeLE-rDXDBWmW4sDM3IjmCp?usp=sharing:
-
-*testando e treinando com dataset de gato e cachorro*
-Utilizamos um modelo pré-treinado, MobileNetV2, é utilizado para reconhecimento de imagens, por ele ter uma quantidade muito grande de camada ele consegue diminuir o overfiting, fazendo com que o gap da precisao diminua.
-Obtivemos acurácia de 97%.
-
-https://colab.research.google.com/drive/1e6FA25X9fcShPaYjcoDmtyiY_wERVi5_?usp=sharing
