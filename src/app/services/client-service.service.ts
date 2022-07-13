@@ -12,15 +12,15 @@ export class ClientServiceService {
   ) { }
 
   async getClients() {
-    return await this.http.get<any>('https://teste-355700.uc.r.appspot.com/clients')
+    return await this.http.get<any>('https://petland-l7je9nqon-camilams27.vercel.app/clients')
   }
 
   async loginClient(client: any): Promise<Observable<any>> {
-    return this.http.post<any>('https://teste-355700.uc.r.appspot.com/clients/login', client)
+    return this.http.post<any>('https://petland-l7je9nqon-camilams27.vercel.app/clients/login', client)
   }
 
   async createClient(client: any): Promise<Observable<any>> {
-    return this.http.post<any>('https://teste-355700.uc.r.appspot.com/clients', client)
+    return this.http.post<any>('https://petland-l7je9nqon-camilams27.vercel.app/clients', client)
   }
 
 }

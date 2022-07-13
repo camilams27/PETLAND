@@ -12,18 +12,18 @@ export class PetService {
   ) { }
 
   async getPets(login: String): Promise<Observable<any>> {
-    return this.http.get<any>(`https://teste-355700.uc.r.appspot.com/pets/${login}`)
+    return this.http.get<any>(`https://petland-l7je9nqon-camilams27.vercel.app/pets/${login}`)
   }
 
   async createPet(pet: any, login: String): Promise<Observable<any>> {
-    return this.http.post<any>(`https://teste-355700.uc.r.appspot.com/pets/${login}`, pet)
+    return this.http.post<any>(`https://petland-l7je9nqon-camilams27.vercel.app/pets/${login}`, pet)
   }
 
   async updatePet(login: String, pet: any ): Promise<Observable<any>> {
-    return this.http.put<any>(`https://teste-355700.uc.r.appspot.com/pets/${login}`, pet)
+    return this.http.put<any>(`https://petland-l7je9nqon-camilams27.vercel.app/pets/${login}`, pet)
   }
 
   async deletePet(login: String, nome: String ): Promise<Observable<any>> {
-    return this.http.delete<any>(`https://teste-355700.uc.r.appspot.com/pets/${login}/${nome}`)
+    return this.http.delete<any>(`https://petland-l7je9nqon-camilams27.vercel.app/pets/${login}/${nome}`)
   }
 }
