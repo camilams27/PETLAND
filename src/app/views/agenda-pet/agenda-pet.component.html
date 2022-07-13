@@ -1,19 +1,59 @@
-<button class="btnFechar" mat-dialog-close><mat-icon>close</mat-icon></button>
-<article class="modalAgenda">
-    <section class="infoPet">
-        <img src="{{data.pet.imagem}}" alt="" class="imagemPet">
-        <div>
-            <h2 mat-dialog-title class="nomePet">Nome: {{data.pet.nome}}</h2>
-            <div class="icones">
-                <mat-icon (click)="deletAgenda()" class="deletIcon">delete</mat-icon>
-                <mat-icon (click)="editAgenda()" class="editIcon">edit</mat-icon>
+<div id="modalAgendaPet">
+    <button class="btnFechar" mat-dialog-close><mat-icon>close</mat-icon></button>
+    <article class="modalAgenda">
+        <section class="infoPet">
+            <img src="{{data.pet.imagem}}" alt="" class="imagemPet">
+            <div>
+                <h2 mat-dialog-title class="nomePet">Nome: {{data.pet.nome}}</h2>
+                <div class="icones">
+                    <mat-icon (click)="deletAgenda()" class="deletIcon">delete</mat-icon>
+                    <mat-icon (click)="editAgenda()" class="editIcon">edit</mat-icon>
+                </div>
+                <h3>{{data.pet.tipo}}</h3>
+                <h3 class="idade">Idade: {{data.pet.idade}} </h3>
+                <h3 class="raca">Raça: {{data.pet.raca}} </h3>
             </div>
-            <h3 class="idade">Idade: {{data.pet.idade}} </h3>
-            <h3 class="raca">Raça: {{data.pet.raca}} </h3>
-        </div>
-    </section>
-    <section class="cuidados">
-        <h2>Cuidados</h2>
-        <h3> {{data.pet.cuidados}} </h3>
-    </section>
-</article>
+            <div id="checkList">
+                <h2>CheckList</h2>
+                <div>
+                    <mat-form-field [formGroup]="listaForm">
+                        <input matInput 
+                            placeholder="Adicionar" 
+                            class="adicionarInput" 
+                            formControlName="task" 
+                        />
+                    </mat-form-field>
+                    <button id="BtnAddList" mat-button (click)="adicionar()">Adicionar</button>
+                </div>
+                <li id="list" *ngFor="let item of list">
+                    <mat-checkbox 
+                        value="{{item.checks}}" 
+                        name="{{item.checks}}" 
+                        color="primary"
+                        (change)="removeTask($event.source.name)"
+                        >{{item.checks}}
+                    </mat-checkbox>
+                </li>
+            </div>
+        </section>
+        <section id="infoAgenda">
+            <div class="cuidados">
+                <h2>Cuidados</h2>
+                <div *ngIf="cuidados && cuidados.cuidados">
+                    <mat-accordion *ngFor="let cuidado of cuidados.cuidados.texto">
+                        <mat-expansion-panel (opened)="cuidadoOpen = true"
+                                             (closed)="cuidadoOpen = false">
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{cuidado.titulo}}
+                            </mat-panel-title>
+                          </mat-expansion-panel-header>
+                          <p class="expanse">{{cuidado.cuidados}}</p>
+                        </mat-expansion-panel>
+                      </mat-accordion>
+                </div>
+            </div>
+        </section>
+    </article>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

@@ -13,6 +13,8 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 export class CadastroComponent implements OnInit {
   formulario: FormGroup;
   hide = true;
+  loading = false;
+
   constructor(
     private router: Router, 
     private service: ClientServiceService, 
@@ -33,6 +35,7 @@ export class CadastroComponent implements OnInit {
   }
 
   async createClient() { 
+    this.loading = true;
     (await this.service.createClient({
       nome: this.formulario.value.nome,
       login: this.formulario.value.login,
@@ -49,7 +52,7 @@ export class CadastroComponent implements OnInit {
       if(client.success) {
         this.dialogRef.close();
       }
+      this.loading = false;
     });
   }
-
 }

@@ -2,12 +2,36 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+    margin-top: 1rem;
 }
 
-.formAgenda{
-    text-align: center;
+.animal{
+    display: flex;
+    gap: 1rem;
 }
 
 .imagemPET{
     height: 30vh;
+}
+
+#cancel{
+    background-color: brown;
+}
+
+#create{
+    background-color: #71C8EF;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+h3, form{
+    text-align: center;
+}
+
+mat-radio-group{
+    text-align:left;
 }

@@ -1,106 +1,26 @@
-/* 
-#about{
-    display: flex;
-    justify-content: space-between;
-    height: 101vh;
-    background-color: #fff;
-}
-
-:host /deep/ .mat-tab-group {
-    flex-direction: row;
-    overflow: hidden;
-  }
-  :host /deep/ .mat-tab-header {
-    border-bottom: none;
-    background-color: #90c9f670;;
-    align-items: center;
-  }
-  :host /deep/ .mat-tab-header-pagination {
-    display: none !important;
-  }
-  :host /deep/ .mat-tab-label-active {
-    background-color: #70b5ea;
-  }
-  :host /deep/ .mat-tab-labels {
-    flex-direction: column;
-  }
-  :host /deep/ .mat-ink-bar {
-    height: 100%;
-    display: none;
-    left: 98% !important;
-  }
-  :host /deep/ .mat-tab-body-wrapper {
-    flex: 1 1 auto;
-    overflow: hidden;
-  }
-  :host /deep/ .mat-tab-body-content {
-    align-items: center;
-    display: flex;
-    overflow: hidden;
-    padding-left: 47vh;
-}
-:host /deep/ .mat-flat-button {
-    background-color: #47b8eabf;
-    color: #fff;
-    left: 106vh;
-    top: 86vh;
-    position: absolute;
-}
-
-  #pets img{
-    width: 160px;
-    margin-bottom: 50vh;
-    height: 160px;
-}
-
-.pet-name{
-    border-bottom: 3px solid #90c9f6;
-    margin-bottom: 68vh;
-    margin-left: 24vh;
-}
-
-.infos-pet{
-    margin-left: -18vh;
-    margin-bottom: 34vh;
-}
-.infos-pet h3{
-    font-weight: 500;
-}
-.precautions{
-    border-bottom: 3px solid #90c9f6;
-    position: absolute;
-}
-.precautions-list{
-    position: absolute;
-    top: 52vh;
-} */
-
-.agendas{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-}
-
 h1{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: .5rem;
+  margin-top: .5rem;
 }
 
-img{
-  height: 25vh;
-}
-
-article{
+.navAgenda{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin-top: 1rem;
 }
 
-.agendas > div{
+.agendas{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.pets{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,13 +31,33 @@ article{
   background-size: cover;
   height: 10rem;
   width: 10rem;
+  margin: 0;
+}
+
+img{
+  height: 25vh;
 }
 
 .pets:hover{
   cursor: pointer;
 }
 
-.pets{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+article{
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+} 
+
+::-webkit-scrollbar-thumb {
+  background: #70b5ea; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60ade9; 
 }

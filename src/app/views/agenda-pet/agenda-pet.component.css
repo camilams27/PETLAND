@@ -1,17 +1,18 @@
 .modalAgenda{
     padding: 1rem;
-    
 }
 
 .imagemPet{
     height: 13rem;
-    width: 13rem;
+    width: auto;
     border-radius: 15px;
 }
 
 .infoPet{
     display: flex;
+    justify-content: space-between;
     gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 .icones{
@@ -37,4 +38,48 @@
 
 .editIcon:hover, .deletIcon:hover{
     cursor: pointer;
+}
+
+#checkList{
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field{
+    padding: 0;
+    margin-right: .8rem;
+}
+
+#BtnAddList{
+    background-color: #70b5ea;
+}
+
+#list{
+    list-style: none;
+} 
+
+#infoAgenda{
+    display: flex;
+    gap: 1rem;
+}
+
+#modalAgendaPet{
+    overflow: scroll;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+} 
+
+::-webkit-scrollbar-thumb {
+background: #70b5ea; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+background: #60ade9; 
 }

@@ -34,6 +34,13 @@
                     formControlName="raca"
                 >
             </mat-form-field>
+            <mat-radio-group class="tipo">
+                <mat-label class="selectType">Selecione qual é o animal: </mat-label>
+                <div class="animal">
+                 <mat-radio-button value="cachorro" (change)="selectAnimal($event.value)">Cachorro</mat-radio-button>
+                 <mat-radio-button value="gato" (change)="selectAnimal($event.value)">Gato</mat-radio-button>
+                </div>
+             </mat-radio-group>
         </section>
     </form>
     <div mat-dialog-actions class="buttons">
@@ -41,3 +48,4 @@
         <button mat-button id="create" type="submit" (click)="atualizarAgenda()"> Salvar </button>
     </div>
 </article>
+<app-spinner *ngIf="loading"></app-spinner>
