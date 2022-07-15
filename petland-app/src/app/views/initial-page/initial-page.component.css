@@ -182,3 +182,25 @@ a{
         display: block;
     }
 }
+
+@media only screen and (max-width: 413px) {
+    :host /deep/ .mat-tab-body-content {
+        padding-top: 90px;
+        margin-bottom: 98px;
+        display: flex;
+        overflow: visible;
+        padding-left: 2vh;
+    }
+
+    .infoNos{
+        width: 91%;
+    }
+
+    #features img{
+        display: none;
+    }
+
+    :host /deep/ .mat-dialog-content {
+        display: block !important;
+    }
+}
