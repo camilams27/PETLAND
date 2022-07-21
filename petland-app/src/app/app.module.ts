@@ -21,6 +21,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 import { HeaderComponent } from './template/header/header.component';
@@ -40,7 +44,10 @@ import { EquipeComponent } from './views/equipe/equipe.component';
 import { DadosComponent } from './data/dados/dados.component';
 import { LugaresComponent } from './views/lugares/lugares.component';
 import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
-
+import { NotFoundComponent } from './views/not-found/not-found.component';
+import { AcessComponent } from './views/acess/acess.component';
+import { LoginGuard } from './login-guard';
+import { SpinnerComponent } from './views/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +68,9 @@ import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
     DadosComponent,
     LugaresComponent,
     AgendaEditComponent,
+    NotFoundComponent,
+    AcessComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,9 +94,13 @@ import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
     HttpClientModule,
     MatTableModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatExpansionModule,
+    MatRadioModule,
+    MatCheckboxModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

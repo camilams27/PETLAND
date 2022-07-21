@@ -22,6 +22,8 @@ export interface DialogData {
 })
 export class AgendaEditComponent implements OnInit {
   formPet: FormGroup;
+  loading = false;
+  tipoAnimal: String;
   
   constructor(
     @Inject(MAT_DIALOG_DATA) 
@@ -49,12 +51,14 @@ export class AgendaEditComponent implements OnInit {
   }
 
   async atualizarAgenda(){
+    this.loading = true;
     let loginStorage = localStorage.getItem('login') as any;
     loginStorage = JSON.parse(loginStorage);
     (await this.service.updatePet(loginStorage.user,{
       nome: this.formPet.value.nome,
       idade: this.formPet.value.idade,
       raca: this.formPet.value.raca,
+      tipo: this.tipoAnimal,
       imagem: this.formPet.value.imagem,
       antigoNome: this.data.pet.nome
     })).subscribe(pet => {
@@ -67,7 +71,11 @@ export class AgendaEditComponent implements OnInit {
         this.dialogRef.close();
         window.location.reload();
       }
+      this.loading = false;
     });
   }
 
+  selectAnimal(event: any){
+    this.tipoAnimal = event;
+  }
 }

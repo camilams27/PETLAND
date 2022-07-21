@@ -6,7 +6,7 @@
     <form class="formAgenda" [formGroup]="formPet">
        <section class="upload-image">
             <div class="imagem">
-                <img src="https://www.petlove.com.br/dicas/wp-content/uploads/2021/10/gato-sumiu-Petlove.jpg" alt="">
+                <img src="../../../assets/images/cat-picture.png" alt="">
             </div>
             <mat-form-field appearance="fill" class="inputImagem">
                 <mat-label>Imagem</mat-label>
@@ -14,7 +14,9 @@
                     matInput 
                     formControlName="imagem"
                 >
+                
             </mat-form-field>
+            <input type="file">
        </section>
         <section class="info">
             <mat-form-field appearance="fill" class="inputNome">
@@ -38,6 +40,14 @@
                     formControlName="raca"
                 >
             </mat-form-field>
+    
+            <mat-radio-group class="tipo">
+               <mat-label>Selecione qual é o animal: </mat-label>
+               <div class="animal">
+                <mat-radio-button value="cachorro" (change)="selectAnimal($event.value)">Cachorro</mat-radio-button>
+                <mat-radio-button value="gato" (change)="selectAnimal($event.value)">Gato</mat-radio-button>
+               </div>
+            </mat-radio-group>
         </section>
     </form>
     <div mat-dialog-actions class="buttons">
@@ -45,3 +55,4 @@
         <button mat-button id="create" type="submit" (click)="createAgenda()"> Avançar </button>
     </div>
 </article>
+<app-spinner *ngIf="loading"></app-spinner>

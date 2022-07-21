@@ -1,0 +1,24 @@
+#acess{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    gap: 1rem;
+}
+
+#acess > img{
+    height: 50vh;
+    width: 50vw;
+}
+
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+
+.btn{
+    background-color: #70b5ea;
+    color: white;
+}
+

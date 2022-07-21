@@ -12,6 +12,7 @@ import { ClientServiceService } from 'src/app/services/client-service.service';
 export class LoginComponent implements OnInit {
   hide = true;
   formulario: FormGroup;
+  loading = false;
 
   constructor(
     private service: ClientServiceService, 
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   async login() {
+    this.loading = true;
     (await this.service.loginClient({
       login: this.formulario.value.login,
       senha: this.formulario.value.senha
@@ -43,6 +45,7 @@ export class LoginComponent implements OnInit {
           duration: 2500
         });
       }
+      this.loading = false;
     });
   }
 
