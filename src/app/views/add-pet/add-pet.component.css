@@ -33,3 +33,13 @@ img{
 #create{
     background-color: #71C8EF;
 }
+
+.tipo{
+    display: flex;
+    flex-direction: column;
+}
+
+.animal{
+    display: flex;
+    gap: 1rem;
+}

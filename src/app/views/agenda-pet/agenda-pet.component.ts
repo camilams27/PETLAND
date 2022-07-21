@@ -11,6 +11,7 @@ export interface DialogData {
     imagem: string;
     raca: string;
     cuidados: string;
+    tipo: string;
   }
 }
 
@@ -20,8 +21,12 @@ export interface DialogData {
   styleUrls: ['./agenda-pet.component.css']
 })
 export class AgendaPetComponent implements OnInit {
+  loading = false;
+  list: any ;
 
- 
+  cuidadoOpen = false;
+  cuidados: any;
+  
   constructor(
     @Inject(MAT_DIALOG_DATA) 
     public data: DialogData,
@@ -31,8 +36,15 @@ export class AgendaPetComponent implements OnInit {
     public dialogRef: MatDialogRef<AgendaPetComponent>
   ) { }
 
-  ngOnInit(): void {
-    console.log(this.data)
+  async ngOnInit() {
+    (await this.service.getCuidado(this.data.pet.tipo)).subscribe(cuidado =>{
+      this.update(cuidado);
+    })
+  }
+
+  async update(cuidado: any) {
+    this.cuidados = cuidado;
+    console.log(this.cuidados);
   }
 
   editAgenda() {
@@ -40,6 +52,7 @@ export class AgendaPetComponent implements OnInit {
   }
 
   async deletAgenda() {
+    this.loading = true;
     let loginStorage = localStorage.getItem('login') as any;
     loginStorage = JSON.parse(loginStorage);
     (await this.service.deletePet(loginStorage.user, this.data.pet.nome)).subscribe(pet => {
@@ -52,7 +65,12 @@ export class AgendaPetComponent implements OnInit {
         this.dialogRef.close();
         window.location.reload();
       }
+      this.loading = false;
     });
+  }
+
+  adicionar() {
+    
   }
   
 }

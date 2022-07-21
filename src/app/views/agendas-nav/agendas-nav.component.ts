@@ -12,7 +12,7 @@ import { PetService } from 'src/app/services/pet.service';
 })
 export class AgendasNavComponent implements OnInit {
   pets: any;
-
+  loading = false;
   constructor(
     public modal: MatDialog,
     private http: HttpClient,
@@ -20,10 +20,12 @@ export class AgendasNavComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
+    this.loading = true;
     let loginStorage = localStorage.getItem('login') as any;
     loginStorage = JSON.parse(loginStorage);
     (await this.service.getPets(loginStorage.user)).subscribe(pet => {
-      this.update(pet)
+      this.update(pet);
+      this.loading = false;
     });
     
   }
