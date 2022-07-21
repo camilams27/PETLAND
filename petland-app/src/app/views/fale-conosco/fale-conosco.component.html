@@ -1,4 +1,4 @@
-<div class="mainContainer">
+<form class="faleConosco-container">
   <h1 mat-dialog-title> Fale Conosco </h1>
   <div mat-dialog-content id="help-container">
     <mat-form-field appearance="fill">
@@ -13,12 +13,12 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Qual o seu Problema?</mat-label>
-    <select matNativeControl required id="opçoes"> 
-      <option value="erro1">Dúvidas</option> 
-      <option value="erro2">Esqueci Minha Senha</option>
-      <option value="erro3">Reportar Erros Gramaticais</option>  
-      <option value="erro4">Reportar Erros Visuais</option>  
-      </select>
+      <mat-select matNativeControl required id="opçoes"> 
+        <mat-option value="duvidas">Dúvidas</mat-option> 
+        <mat-option value="esqueciSenha">Esqueci Minha Senha</mat-option>
+        <mat-option value="reportErro">Reportar Erro</mat-option>  
+        <mat-option value="outros">Outro</mat-option>  
+      </mat-select>
     </mat-form-field>
 
   <mat-form-field appearance="fill">
@@ -27,8 +27,8 @@
   </mat-form-field>
   </div>
 
-  <div class="buttons">
-    <button mat-button id="cancel"> Cancelar </button>
+  <div id="buttons">
+    <button mat-button id="cancel" mat-dialog-close> Cancelar </button>
     <button mat-button id="next" routerLink="/home"> Enviar </button>
   </div>
-</div>
+</form>

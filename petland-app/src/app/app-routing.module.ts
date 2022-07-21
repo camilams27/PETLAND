@@ -1,3 +1,5 @@
+import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
+import { DadosComponent } from './data/dados/dados.component';
 import { FaleConoscoComponent } from './views/fale-conosco/fale-conosco.component';
 import { UrgenciaComponent } from './views/urgencia/urgencia.component';
 import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
@@ -8,6 +10,8 @@ import { InitialPageComponent } from './views/initial-page/initial-page.componen
 import { HomePageComponent } from './views/home-page/home-page.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { EquipeComponent } from './views/equipe/equipe.component';
+import { AgendaPetComponent } from './views/agenda-pet/agenda-pet.component';
+import { LugaresComponent } from './views/lugares/lugares.component';
 
 const routes: Routes = [
   {
@@ -31,12 +35,16 @@ const routes: Routes = [
     component: UrgenciaComponent
   },
   {
-    path: 'fale-conosco',
-    component: FaleConoscoComponent
-  },
-  {
     path: 'equipe',
     component: EquipeComponent
+  },
+  {
+    path: 'dados',
+    component: DadosComponent
+  },
+  {
+    path: 'lugares',
+    component: LugaresComponent
   }
 ];
 

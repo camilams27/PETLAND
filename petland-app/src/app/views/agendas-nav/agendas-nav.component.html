@@ -1,38 +1,18 @@
-<app-nav></app-nav>
-<section id="about">
-    <mat-tab-group animationDuration="0ms" id="pets" mat-align-tabs="center">
-        <mat-tab label="PET 01">
-            <img src="https://i.ibb.co/FhXx0wN/gato-freepik-freepic-diller-970x550.jpg" alt=""> 
-            <h2 class="pet-name">PET 01</h2>
-            <div class="infos-pet">
-                <h3>Nascimento: 00/00/0000</h3>
-                <h3>Idade: 3 anos</h3>
-                <h3>Raça: Frajola</h3>
+<article>
+    <h1>
+        Agendas PET
+        <mat-icon>pets</mat-icon>
+    </h1>
+    <section class="agendas">
+        <div *ngFor="let pet of pets.pets" (click)="agendaPet(pet)" class="pets">
+            <div *ngIf="pets && pets.pets && pets.pets.length > 0">
+                <img src="{{ pet.imagem }}" alt="">
+                <h3>{{ pet.nome }}</h3>
             </div>
-            <h2 class="precautions">Cuidados</h2>
-            <ul class="precautions-list">
-                <li>Aplique antiparasitas também em animais que ficam apenas em casa</li>
-                <li>Substitua bebedouros por fontes</li>
-                <li>Sempre instale tela nas janelas</li>
-            </ul>  
-            <button mat-flat-button>Agenda</button>
-        </mat-tab>
-        <mat-tab label="PET 02">
-            <img src="https://i.ibb.co/qs1tTWp/01-domesticated-dog.jpg" alt=""> 
-            <h2 class="pet-name">PET 02</h2>
-            <div class="infos-pet">
-                <h3>Nascimento: 00/00/0000</h3>
-                <h3>Idade: 3 anos</h3>
-                <h3>Raça: Cachorro</h3>
-            </div>
-            <h2 class="precautions">Cuidados</h2>
-            <ul class="precautions-list">
-                <li>Prepare a casa para o pet</li>
-                <li>Antipulgas e remédio para carrapato</li>
-                <li>O cão sozinho em casa</li>
-            </ul>  
-            <button mat-flat-button>Agenda</button>
-        </mat-tab>
-      </mat-tab-group>
-</section>
-<router-outlet></router-outlet>
+        </div>
+        <div (click)="adicionarPet()">
+            <div class="mais"></div>
+            <h3> Adicionar PET</h3>
+        </div>
+    </section>
+</article>

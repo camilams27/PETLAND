@@ -1,1 +1,47 @@
-<p>add-pet works!</p>
+<article>
+    <h3>
+        Adicionar Agenda Pet
+        <mat-icon>pets</mat-icon>
+    </h3>
+    <form class="formAgenda" [formGroup]="formPet">
+       <section class="upload-image">
+            <div class="imagem">
+                <img src="https://www.petlove.com.br/dicas/wp-content/uploads/2021/10/gato-sumiu-Petlove.jpg" alt="">
+            </div>
+            <mat-form-field appearance="fill" class="inputImagem">
+                <mat-label>Imagem</mat-label>
+                <input 
+                    matInput 
+                    formControlName="imagem"
+                >
+            </mat-form-field>
+       </section>
+        <section class="info">
+            <mat-form-field appearance="fill" class="inputNome">
+                <mat-label>Nome</mat-label>
+                <input 
+                    matInput
+                    formControlName="nome" 
+                >
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="inputIdade">
+                <mat-label>Idade</mat-label>
+                <input 
+                    matInput 
+                    formControlName="idade"
+                >
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="inputRaca">
+                <mat-label>Raça</mat-label>
+                <input 
+                    matInput 
+                    formControlName="raca"
+                >
+            </mat-form-field>
+        </section>
+    </form>
+    <div mat-dialog-actions class="buttons">
+        <button mat-button id="cancel" mat-dialog-close> Cancelar </button>
+        <button mat-button id="create" type="submit" (click)="createAgenda()"> Avançar </button>
+    </div>
+</article>

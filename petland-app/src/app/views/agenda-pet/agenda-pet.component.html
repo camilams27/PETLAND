@@ -1,1 +1,19 @@
-<p>agenda-pet works!</p>
+<button class="btnFechar" mat-dialog-close><mat-icon>close</mat-icon></button>
+<article class="modalAgenda">
+    <section class="infoPet">
+        <img src="{{data.pet.imagem}}" alt="" class="imagemPet">
+        <div>
+            <h2 mat-dialog-title class="nomePet">Nome: {{data.pet.nome}}</h2>
+            <div class="icones">
+                <mat-icon (click)="deletAgenda()" class="deletIcon">delete</mat-icon>
+                <mat-icon (click)="editAgenda()" class="editIcon">edit</mat-icon>
+            </div>
+            <h3 class="idade">Idade: {{data.pet.idade}} </h3>
+            <h3 class="raca">Raça: {{data.pet.raca}} </h3>
+        </div>
+    </section>
+    <section class="cuidados">
+        <h2>Cuidados</h2>
+        <h3> {{data.pet.cuidados}} </h3>
+    </section>
+</article>

@@ -1,4 +1,4 @@
-
+/* 
 #about{
     display: flex;
     justify-content: space-between;
@@ -73,4 +73,51 @@
 .precautions-list{
     position: absolute;
     top: 52vh;
+} */
+
+.agendas{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+img{
+  height: 25vh;
+}
+
+article{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.agendas > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mais{
+  background-image: url(../../../assets/images/more.png);
+  background-size: cover;
+  height: 10rem;
+  width: 10rem;
+}
+
+.pets:hover{
+  cursor: pointer;
+}
+
+.pets{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

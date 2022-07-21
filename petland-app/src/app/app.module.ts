@@ -18,6 +18,10 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
@@ -33,6 +37,9 @@ import { UrgenciaComponent } from './views/urgencia/urgencia.component';
 import { AgendasNavComponent } from './views/agendas-nav/agendas-nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EquipeComponent } from './views/equipe/equipe.component';
+import { DadosComponent } from './data/dados/dados.component';
+import { LugaresComponent } from './views/lugares/lugares.component';
+import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
 
 
 @NgModule({
@@ -51,6 +58,9 @@ import { EquipeComponent } from './views/equipe/equipe.component';
     UrgenciaComponent,
     AgendasNavComponent,
     EquipeComponent,
+    DadosComponent,
+    LugaresComponent,
+    AgendaEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +82,9 @@ import { EquipeComponent } from './views/equipe/equipe.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
+    MatTableModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

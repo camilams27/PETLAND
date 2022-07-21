@@ -1,20 +1,34 @@
-<form class="login-container">
+<form class="login-container" [formGroup]="formulario">
   <h1 mat-dialog-title> Entrar </h1>
   <div class="campos">
     <mat-form-field appearance="fill">
       <mat-label>Login</mat-label>
-      <input matInput >
+      <input 
+        matInput 
+        formControlName="login"
+      />
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Senha</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
+      <input 
+        matInput 
+        [type]="hide ? 'password' : 'text'"
+        formControlName="senha"
+      />
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
   </div>
   <div class="buttons">
-    <button mat-button id="next" routerLink="/home"> Entrar </button>
-    <button mat-button id="cancel"> Cancelar </button>
+    <button 
+      mat-button 
+      id="next"
+      (click)="login()"
+      type="submit"
+    > 
+      Entrar 
+    </button>
+    <button mat-button id="cancel" mat-dialog-close> Cancelar </button>
   </div>
 </form>

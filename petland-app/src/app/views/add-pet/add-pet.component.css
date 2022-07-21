@@ -1,0 +1,35 @@
+.formAgenda{
+    display: flex;
+    gap: 1rem;
+}
+
+h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+img{
+    height: 10rem;  
+}
+
+.info, .upload-image{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+#cancel{
+    background-color: brown;
+}
+
+#create{
+    background-color: #71C8EF;
+}
