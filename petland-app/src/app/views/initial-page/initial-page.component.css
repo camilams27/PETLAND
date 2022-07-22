@@ -34,7 +34,7 @@ main{
 
 button{
     color: white;
-    background-color: #69C5EE;
+    background-color: #70B5EA;
     width: 10rem;
 }
 
@@ -182,5 +182,51 @@ a{
     }
     #features{
         display: block;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body{
+        max-width: 450px;
+    }
+    .home {
+      display: grid;
+      grid-template-areas: "title subtitle" "content";
+      overflow: hidden;
+    }
+    .logo{
+        display: block;
+    }
+    .logo img{
+        position: absolute;
+        padding-top: -15rem;
+        margin-bottom: 105px;
+        top: -26px;
+        z-index: -9999;
+        right: -17px;
+        opacity: 67%;
+        width: 125vw;
+    }
+    .content{
+        position: relative;
+        z-index: 1;
+    }
+    #features{
+        display: block;
+    }
+    #features img {
+        height: 26%;
+        bottom: 34px;
+    }
+    :host /deep/ .mat-tab-labels {
+        flex-direction: row;
+    }
+    .infoNos{
+        width: 100%;
+    }
+    :host /deep/ .mat-tab-body-content {
+        padding-top: 0vh;
+        padding-left: 2vh;
+        height: 100vh;
     }
 }

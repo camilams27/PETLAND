@@ -61,3 +61,14 @@ article{
 ::-webkit-scrollbar-thumb:hover {
   background: #60ade9; 
 }
+
+@media only screen and (max-width: 450px) {
+  img{
+    height: 180px;
+    width: 180px;
+  }
+
+  .agendas{
+    grid-template-columns: 1fr 1fr;
+  }
+}

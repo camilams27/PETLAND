@@ -12,4 +12,6 @@ export class UrgenciaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  panelOpenState = false;
+
 }
