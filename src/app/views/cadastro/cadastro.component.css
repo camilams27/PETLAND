@@ -1,3 +1,4 @@
+
 .form{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,4 +21,20 @@ h1{
 
 #create{
     background-color: #71C8EF;
+}
+:host /deep/ .mat-form-field-underline {
+    display: none;
+    width: 0;
+}
+:host /deep/ .mat-form-field-flex {
+    border: 2px solid #71c8ef;
+    border-radius: 0px !important;
+    background: white;
+}
+
+
+@media only screen and (max-width: 450px) {
+    .form{
+        grid-template-columns: 1fr;
+    }
 }

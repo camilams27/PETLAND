@@ -38,3 +38,9 @@
 .editIcon:hover, .deletIcon:hover{
     cursor: pointer;
 }
+
+@media only screen and (max-width: 450px) {
+    .infoPet{
+        display: block;
+    }
+}

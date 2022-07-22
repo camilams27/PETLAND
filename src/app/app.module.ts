@@ -21,7 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
@@ -84,7 +84,8 @@ import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
     HttpClientModule,
     MatTableModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

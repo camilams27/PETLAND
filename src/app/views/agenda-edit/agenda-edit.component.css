@@ -11,3 +11,23 @@
 .imagemPET{
     height: 30vh;
 }
+:host /deep/ .mat-form-field-underline {
+    display: none;
+    width: 0;
+}
+:host /deep/ .mat-form-field-flex {
+    border: 2px solid #71c8ef;
+    border-radius: 0px !important;
+    background: white;
+}
+
+@media only screen and (max-width: 450px) {
+    .imagemPET{
+        height: 31vh;
+        width: 31vh;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
