@@ -57,3 +57,20 @@ a{
 .sair{
     border: none;
 }
+
+@media only screen and (max-width: 450px) {
+    #buttons{
+        display: contents;
+    }
+    .funcionalidades{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+    .user{
+        display: none;
+    }
+    .sair{
+        margin-left: 53px;
+    }
+}

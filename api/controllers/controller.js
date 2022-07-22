@@ -160,5 +160,18 @@ module.exports = {
         } catch (error) {
             response.status(500).json({ error: error.message });
         }
+    },
+    async coleiraPet(request, response) {
+        try {
+            const { latitude, longitude, id } = request.body;
+            console.log(request.body)
+            if(!latitude || !longitude || !id) {
+                return response.status(400).json({ error: 'informe corretamente os campos' });
+            }
+            await Pet.findOneAndUpdate({ idPet: id }, { latitude, longitude });
+            return response.status(200).json({ message : 'localização Enviada', success:true });
+        } catch (error) {
+            response.status(500).json({ error: error.message });
+        }
     }
 }

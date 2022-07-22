@@ -21,6 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTreeModule} from '@angular/material/tree';
 
 
 import { HeaderComponent } from './template/header/header.component';
@@ -40,6 +41,7 @@ import { EquipeComponent } from './views/equipe/equipe.component';
 import { DadosComponent } from './data/dados/dados.component';
 import { LugaresComponent } from './views/lugares/lugares.component';
 import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
+
 
 
 @NgModule({
@@ -84,7 +86,8 @@ import { AgendaEditComponent } from './views/agenda-edit/agenda-edit.component';
     HttpClientModule,
     MatTableModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,5 +14,6 @@ routes.get('/pets/:login', controller.pets);
 routes.post('/pets/:login', controller.createPet);
 routes.put('/pets/:login', controller.updatePet);
 routes.delete('/pets/:login/:nome', controller.deletePet);
+routes.post('/pet/coleira', controller.coleiraPet);
 
 module.exports = routes;

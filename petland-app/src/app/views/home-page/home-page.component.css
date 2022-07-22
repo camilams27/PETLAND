@@ -61,3 +61,28 @@
     padding: 0 23px;
 }
 
+@media only screen and (max-width: 450px) {
+  .home-content{
+    flex-direction: column-reverse;
+  }
+  
+  :host /deep/ .mat-card-content {
+    height: 56px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  button {
+    width: 242px;
+  }
+  
+  :host /deep/ .mat-card>.mat-card-actions:last-child{
+    margin-bottom: 12px;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  
+  img{
+    margin-bottom: 10px;
+  }
+  }
