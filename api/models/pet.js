@@ -20,7 +20,24 @@ const petSchema = new mongoose.Schema({
     imagem:{
         type: String,
         required: true,
-    }
+    },
+    idPet:{
+        type: Number,
+        required: true,
+    },
+    latitude:{
+        type: String,
+        required: false,
+    },
+    longitude:{
+        type: String,
+        required: false,
+    },
+    tipo:{
+        type: String,
+        required: true,
+    },
+    checkList: [{ checks: String }]
 });
 
 module.exports = mongoose.model('Pet', petSchema);

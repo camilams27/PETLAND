@@ -5,6 +5,7 @@
             <img src="{{data.pet.imagem}}" alt="" class="imagemPet">
             <div>
                 <h2 mat-dialog-title class="nomePet">Nome: {{data.pet.nome}}</h2>
+                <h3> Id do pet: {{data.pet.idPet}}</h3>
                 <div class="icones">
                     <mat-icon (click)="deletAgenda()" class="deletIcon">delete</mat-icon>
                     <mat-icon (click)="editAgenda()" class="editIcon">edit</mat-icon>
@@ -17,18 +18,18 @@
                 <h2>CheckList</h2>
                 <div>
                     <mat-form-field [formGroup]="listaForm">
-                        <input matInput 
-                            placeholder="Adicionar" 
-                            class="adicionarInput" 
-                            formControlName="task" 
+                        <input matInput
+                            placeholder="Adicionar"
+                            class="adicionarInput"
+                            formControlName="task"
                         />
                     </mat-form-field>
                     <button id="BtnAddList" mat-button (click)="adicionar()">Adicionar</button>
                 </div>
                 <li id="list" *ngFor="let item of list">
-                    <mat-checkbox 
-                        value="{{item.checks}}" 
-                        name="{{item.checks}}" 
+                    <mat-checkbox
+                        value="{{item.checks}}"
+                        name="{{item.checks}}"
                         color="primary"
                         (change)="removeTask($event.source.name)"
                         >{{item.checks}}

@@ -2,6 +2,8 @@ const { response } = require('express');
 
 const Client = require('../models/Client');
 const Pet = require('../models/Pet');
+const Cuidado = require('../models/Cuidado');
+const Vacina = require('../models/Vacina');
 
 module.exports = {
     async clients(request, response) {
@@ -99,7 +101,6 @@ module.exports = {
     },
 
     // pets
-
     async pets(request, response) {
         try {
             const { login } = request.params;
@@ -114,12 +115,25 @@ module.exports = {
             nome,
             idade,
             raca,
-            imagem
+            imagem,
+            tipo
         } = request.body;
         const { login } = request.params;
 
-        if (!nome || !idade || !raca || !imagem) {
-            return response.status(200).json({ error: 'informe todos os campos corretamente.' });
+        if (!nome || !idade || !raca || !imagem || !tipo) {
+            return response.status(200).json({ message: 'informe todos os campos corretamente.' });
+        }
+
+        const findLastPet = await Pet.findOne().sort({ field: 'asc', _id: -1 }).exec();
+        let getNextSeq = 0;
+        if (findLastPet) {
+            getNextSeq = findLastPet.idPet + 1;
+        }
+
+        const findVacinas = await Vacina.findOne({ tipo }).exec();
+        const checkList = [];
+        for (const vacina of findVacinas.vacinas) {
+            checkList.push({ checks: vacina.vacina })
         }
 
         const pet = new Pet({
@@ -127,7 +141,10 @@ module.exports = {
             nome,
             idade,
             raca,
-            imagem
+            imagem,
+            tipo,
+            idPet: getNextSeq,
+            checkList
         });
 
         try {
@@ -139,12 +156,12 @@ module.exports = {
     },
     async updatePet(request, response) {
         try {
-            const { nome, idade, raca, imagem, antigoNome } = request.body;
+            const { nome, idade, raca, imagem, antigoNome, tipo } = request.body;
             const { login } = request.params;
-        if(!nome || !idade || !raca || !imagem ) {
-            return response.status(400).json({ error: 'informe corretamente os campos' });
+        if(!nome || !idade || !raca || !imagem || !tipo ) {
+            return response.status(200).json({ message: 'informe corretamente os campos' });
         }
-        await Pet.findOneAndUpdate({ login, nome:antigoNome }, { nome, idade, raca, imagem });
+        await Pet.findOneAndUpdate({ login, nome:antigoNome }, { nome, idade, raca, imagem, tipo });
         return response.status(200).json({ message: 'agenda pet editada', success:true });
         
         } catch (error) {
@@ -157,6 +174,60 @@ module.exports = {
             const { login, nome } = request.params;
             await Pet.deleteOne({ login, nome });
             return response.status(200).json({ message : 'agenda pet deletada.', success:true });
+        } catch (error) {
+            response.status(500).json({ error: error.message });
+        }
+    },
+
+    //cuidado
+    async cuidados(request, response) {
+        try {
+            const { tipo } = request.params;
+            const cuidados = await Cuidado.findOne({ tipo }).exec();
+            return response.status(200).json({ cuidados});
+        } catch (err) {
+            response.status(500).json({ error: err.message });
+        }
+    },
+    
+    //list
+    async checklistPet(request, response) {
+        try {
+            const { nome, tipo, check, login } = request.body;
+        if(!nome || !tipo || !check || !login) {
+            return response.status(200).json({ error: 'informe corretamente os campos' });
+        }
+        const allChecksForPet = await Pet.findOne({ login, nome }).exec();
+        const checkList = allChecksForPet.checkList;
+        checkList.push({checks: check});
+        await Pet.findOneAndUpdate({ login, nome }, { checkList: checkList });
+        return response.status(200).json({ message: 'novo check adicionado', checks:checkList });
+        } catch (error) {
+            response.status(500).json({ error: error.message });
+        }
+    },
+    async deleteChecklistPet(request, response) {
+        try {
+            const { nome, tipo, check, login } = request.body;
+        if(!nome || !tipo || !check || !login) {
+            return response.status(200).json({ error: 'informe corretamente os campos' });
+        }
+        const allChecksForPet = await Pet.findOne({ login, nome }).exec();
+        const checkList = allChecksForPet.checkList.filter(ck => ck.checks !== check);
+        await Pet.findOneAndUpdate({ login, nome }, { checkList: checkList });
+        return response.status(200).json({ message: 'check finalizado', checks: checkList });
+        } catch (error) {
+            response.status(500).json({ error: error.message });
+        }
+    },
+    async coleiraPet(request, response) {
+        try {
+            const { latitude, longitude, id } = request.body;
+            if(!latitude || !longitude || !id) {
+                return response.status(400).json({ error: 'informe corretamente os campos' });
+            }
+            await Pet.findOneAndUpdate({ idPet: id }, { latitude, longitude });
+            return response.status(200).json({ message : 'localização Enviada', success:true });
         } catch (error) {
             response.status(500).json({ error: error.message });
         }

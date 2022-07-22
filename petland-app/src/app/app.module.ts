@@ -49,6 +49,7 @@ import { AcessComponent } from './views/acess/acess.component';
 import { LoginGuard } from './login-guard';
 import { SpinnerComponent } from './views/spinner/spinner.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

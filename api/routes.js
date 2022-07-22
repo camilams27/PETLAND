@@ -15,4 +15,11 @@ routes.post('/pets/:login', controller.createPet);
 routes.put('/pets/:login', controller.updatePet);
 routes.delete('/pets/:login/:nome', controller.deletePet);
 
+routes.get('/pets/cuidado/:tipo', controller.cuidados);
+
+routes.post('/pet/check', controller.checklistPet);
+routes.post('/pet/check/remove', controller.deleteChecklistPet);
+
+routes.post('/pet/coleira', controller.coleiraPet);
+
 module.exports = routes;

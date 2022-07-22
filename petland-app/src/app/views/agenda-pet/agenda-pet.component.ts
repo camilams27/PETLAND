@@ -15,6 +15,7 @@ export interface DialogData {
     tipo: string;
     checkList: any;
     login: string;
+    idPet: number;
   }
 }
 

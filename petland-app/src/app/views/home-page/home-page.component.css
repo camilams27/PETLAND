@@ -49,19 +49,11 @@
   margin-left: 7vh;
   margin-right: 7vh;
 }
-<<<<<<< HEAD:petland-app/src/app/views/home-page/home-page.component.css
-
-=======
->>>>>>> 45550d9 (responsividade):src/app/views/home-page/home-page.component.css
 .home-content{
   display: inline-flex;
   justify-content: space-around;
   column-gap: 12%;
 }
-<<<<<<< HEAD:petland-app/src/app/views/home-page/home-page.component.css
-
-=======
->>>>>>> 45550d9 (responsividade):src/app/views/home-page/home-page.component.css
 .home-read-more{
   background: #8dc4eec9;
   color: #fff;
@@ -69,27 +61,27 @@
 }
 
 @media only screen and (max-width: 450px) {
-.home-content{
-  flex-direction: column-reverse;
-}
-
-:host /deep/ .mat-card-content {
-  height: 56px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-button {
-  width: 242px;
-}
-
-:host /deep/ .mat-card>.mat-card-actions:last-child{
-  margin-bottom: 12px;
-  padding-bottom: 0;
-  width: 100%;
-}
-
-img{
-  margin-bottom: 10px;
-}
-}
+  .home-content{
+    flex-direction: column-reverse;
+  }
+  
+  :host /deep/ .mat-card-content {
+    height: 56px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  button {
+    width: 242px;
+  }
+  
+  :host /deep/ .mat-card>.mat-card-actions:last-child{
+    margin-bottom: 12px;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  
+  img{
+    margin-bottom: 10px;
+  }
+  }

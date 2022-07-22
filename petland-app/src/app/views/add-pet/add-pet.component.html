@@ -8,46 +8,57 @@
             <div class="imagem">
                 <img src="../../../assets/images/cat-picture.png" alt="">
             </div>
-            <mat-form-field appearance="fill" class="inputImagem">
+            <!-- <mat-form-field appearance="fill" class="inputImagem">
                 <mat-label>Imagem</mat-label>
-                <input 
-                    matInput 
+                <input
+                    matInput
                     formControlName="imagem"
                 >
-                
-            </mat-form-field>
-            <input type="file">
+            </mat-form-field> -->
+            <div class="row col-md-12">
+              <input type="file" (change)="onImportFile($event)" class="fileInputProfile form-control">
+            </div>
+
        </section>
         <section class="info">
             <mat-form-field appearance="fill" class="inputNome">
                 <mat-label>Nome</mat-label>
-                <input 
+                <input
                     matInput
-                    formControlName="nome" 
+                    formControlName="nome"
                 >
             </mat-form-field>
             <mat-form-field appearance="fill" class="inputIdade">
                 <mat-label>Idade</mat-label>
-                <input 
-                    matInput 
+                <input
+                    matInput
                     formControlName="idade"
                 >
             </mat-form-field>
             <mat-form-field appearance="fill" class="inputRaca">
                 <mat-label>Raça</mat-label>
-                <input 
-                    matInput 
+                <input
+                    matInput
                     formControlName="raca"
                 >
             </mat-form-field>
-    
-            <mat-radio-group class="tipo">
-               <mat-label>Selecione qual é o animal: </mat-label>
-               <div class="animal">
+
+            <mat-radio-group class="tipo" *ngIf="!retornoAnimalCnn">
+               <mat-label >Selecione qual é o animal: </mat-label>
+               <div class="animal" *ngIf="!retornoAnimalCnn">
                 <mat-radio-button value="cachorro" (change)="selectAnimal($event.value)">Cachorro</mat-radio-button>
                 <mat-radio-button value="gato" (change)="selectAnimal($event.value)">Gato</mat-radio-button>
                </div>
             </mat-radio-group>
+
+            <mat-radio-group class="tipo" *ngIf="retornoAnimalCnn">
+              <mat-label *ngIf="retornoAnimalCnn">Confirme se seu pet é: {{ retornoAnimalCnn }} </mat-label>
+              <div class="animal" *ngIf="retornoAnimalCnn">
+               <mat-radio-button value="sim" (change)="tipoAnimalConfirm($event.value)">Sim</mat-radio-button>
+               <mat-radio-button value="nao" (change)="tipoAnimalConfirm($event.value)">Não</mat-radio-button>
+              </div>
+           </mat-radio-group>
+
         </section>
     </form>
     <div mat-dialog-actions class="buttons">

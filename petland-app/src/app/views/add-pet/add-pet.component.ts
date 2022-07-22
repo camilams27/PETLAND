@@ -15,10 +15,14 @@ export class AddPetComponent implements OnInit {
   formPet: FormGroup;
   loading = false;
   tipoAnimal: String;
+  isImageSaved: boolean = false;
+  cardImageBase64: string = '';
+  return: any;
+  retornoAnimalCnn: string;
 
   constructor(
     private router: Router,
-    private service: PetService, 
+    private service: PetService,
     private _snackBar: MatSnackBar,
     public modal: MatDialog,
     public dialogRef: MatDialogRef<AddPetComponent>
@@ -42,7 +46,7 @@ export class AddPetComponent implements OnInit {
       idade: this.formPet.value.idade,
       raca: this.formPet.value.raca,
       tipo: this.tipoAnimal,
-      imagem: this.formPet.value.imagem
+      imagem: this.formPet.value.imagem ? this.formPet.value.imagem : this.cardImageBase64
     }, loginStorage.user)).subscribe(pet => {
       this._snackBar.open(pet.message, '', {
         horizontalPosition: 'center',
@@ -61,4 +65,45 @@ export class AddPetComponent implements OnInit {
     this.tipoAnimal = event;
   }
 
+  async onImportFile(event: any) {
+    const fileInput = event.target;
+    const file = fileInput.files[0];
+    this.loading = true;
+      // if (file) {
+      //   const fileType = file.name.split('.')[1];
+      //   ((await this.service.importFile(file)).subscribe(pet => {
+      //     this.update(pet);
+      //     this.loading = false;
+      //   })
+      //   )
+      // }
+      if (event.target.files && event.target.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e: any) => {
+          const image = new Image();
+          image.src = e.target.result;
+          image.onload = rs => {
+            const imgBase64Path = e.target.result;
+            this.cardImageBase64 = imgBase64Path;
+            this.isImageSaved = true;
+          };
+        };
+        reader.readAsDataURL(event.target.files[0]);
+      }
+
+  }
+
+  update(result: any) {
+    this.return = result;
+    this.retornoAnimalCnn = this.return.indexOf('cat') !== -1 ? 'gato' : 'cachorro';
+
+  }
+
+  tipoAnimalConfirm(event: any) {
+    if (event === 'sim') {
+      this.tipoAnimal = this.retornoAnimalCnn;
+    } else {
+      this.tipoAnimal = this.retornoAnimalCnn === 'cachorro' ? 'gato' : 'cachorro';
+    }
+  }
 }
